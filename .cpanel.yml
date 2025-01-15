@@ -1,0 +1,4 @@
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/becmaweb/escalemaritime.becmaweb.ca/wp-content/themes/escalemaritime
+    - /bin/cp -R /home/becmaweb/repositories/escalemaritime/* $DEPLOYPATH
