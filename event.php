@@ -7,8 +7,10 @@ Template Name: Événements
 <?php get_header(); ?>
 
 <main>
-<p>Événements</p>
-<p>test</p>
+    <h2>Nos événements</h2>
+    <?php 
+        get_template_part('/templates/events');
+    ?>
 </main>
 
 <?php get_footer(); ?>

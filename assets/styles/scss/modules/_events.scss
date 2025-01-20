@@ -1,0 +1,8 @@
+.section__events {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  section.event {
+    background-color: #ddeaf8;
+  }
+}
