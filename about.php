@@ -14,7 +14,7 @@ Template Name: À propos
     'theme_location' => 'primary'
     ));
 ?>
-
+<h3>TEST</h3>
 </main>
 
 <?php get_footer(); ?>

@@ -1,3 +1,5 @@
-h1 {
-  color: red;
-}
+@import 'layout';
+@import './partials/mixins';
+@import './partials/variables';
+@import './partials/typographie';
+@import './partials/reset';
