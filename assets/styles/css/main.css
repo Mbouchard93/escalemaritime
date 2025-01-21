@@ -1,1 +1,1 @@
-.section__events{display:grid;grid-template-columns:repeat(3, 1fr)}.section__events section.event{background-color:#ddeaf8}h1{color:red}
+.section__events{display:grid;grid-template-columns:repeat(3, 1fr)}.section__events section.event{background-color:#ddeaf8}.bloc_text_image{display:flex}h1{color:red}
