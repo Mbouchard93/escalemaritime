@@ -8,7 +8,7 @@ Template Name: Historique et mission
 <main>
 <?php
     wp_nav_menu( $arg = array (
-    'menu' => 'about',
+    'menu' => 'À propos',
     'menu_class' => 'sub-navigation',
     'theme_location' => 'primary'
     ));
