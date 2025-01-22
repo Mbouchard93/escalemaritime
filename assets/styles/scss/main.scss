@@ -1,9 +1,8 @@
-
+@import './partials/variables';
+@import './partials/reset';
 @import 'layout';
 @import './partials/mixins';
-@import './partials/variables';
 @import './partials/typographie';
-@import './partials/reset';
 @import "modules/events";
 @import "modules/bloc_text_image";
 
