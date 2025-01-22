@@ -14,6 +14,10 @@ Template Name: Historique et mission
     ));
 ?>
 
+<?php 
+        get_template_part('/templates/value');
+?>
+
 </main>
 
 <?php get_footer(); ?>
