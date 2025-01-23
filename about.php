@@ -15,9 +15,8 @@ Template Name: À propos
     ));
 ?>
 
-
 <?php get_template_part('/templates/banner') ?>
-
+<h2>TEST</h2>
 </main>
 
 <?php get_footer(); ?>
