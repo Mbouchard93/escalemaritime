@@ -7,7 +7,9 @@ Template Name: Contact
 <?php get_header(); ?>
 
 <main>
-<p>Contact</p>
+    <?php 
+        get_template_part('/templates/contact_text');
+    ?>
 </main>
 
 <?php get_footer(); ?>
