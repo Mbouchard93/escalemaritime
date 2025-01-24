@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap');
-
 *{
     margin: 0;
     padding: 0;
@@ -22,14 +19,14 @@ img {
 }
 
 body {
-    font-family: 'Nunito', sans-serif;
+    font-family: $nunito;
     font-size: 16px;
     line-height: 1.5;
     color: $color-primary;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Cormorant Garamond', sans-serif;
+    font-family: $garamond;
     font-weight: 600;
     color: $color-primary;
 }
