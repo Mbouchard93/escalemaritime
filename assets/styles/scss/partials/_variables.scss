@@ -1,14 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap');
+
+/* ------ COLOR ------ */
 $blue-navy-primary: #1C4E89;
 $blue-light-secondary: #DDEAF8;
 $turquoise:  #7DCFB6;
-
 $white: #fff;
 $black: #000;
 $smokewhite: #f5f5f5;
 $charcoal:  #3B3B3B;
-
 $red-cta: #F62F2F;
 
+/* ------ COLOR THEME ------ */
 $color-primary: $blue-navy-primary;
 $color-secondary: $blue-light-secondary;
 $color-cta: $red-cta;
@@ -17,3 +20,14 @@ $bg-primary: $smokewhite;
 $bg-secondary : $blue-navy-primary;
 $bg-third: $blue-light-secondary;
 
+/* ------ FONTS ------ */
+$nunito: "Nunito", sans-serif;
+$garamond: "Cormorant Garamond", sans-serif;
+
+
+/* ------ BREAKPOINTS ------ */
+$xs-screen: 480px;
+$s-screen: 640px;
+$m-screen: 768px;
+$l-screen: 1024px;
+$xl-screen: 1280px;
