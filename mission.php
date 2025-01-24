@@ -15,6 +15,10 @@ Template Name: Historique et mission
 ?>
 
 <?php 
+        get_template_part('/templates/history');
+?>
+
+<?php 
         get_template_part('/templates/value');
 ?>
 
