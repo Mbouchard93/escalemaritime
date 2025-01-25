@@ -24,6 +24,7 @@ function remove_wysiwyg() {
 add_action('init', 'create_posttype');
 add_action('init', 'remove_wysiwyg');
 
+wp_enqueue_script( 'dialog', get_template_directory_uri() . '/assets/js/dialog.js');
 /* wp_enqueue_script( 'slider', '/assets/js/slider.js') */
 
 ?>
