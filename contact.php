@@ -8,6 +8,12 @@ Template Name: Contact
 
 <main>
 
+
+
+    <?php 
+        get_template_part('/templates/contact_text');
+    ?>
+
 </main>
 
 <?php get_footer(); ?>
