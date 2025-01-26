@@ -1,63 +1,77 @@
-header{ 
-    min-height: 100vh; 
-nav {
+header {
+  width: 100%;
+  min-height: 100vh;
+
+  /*   .header__wrapper {
+    background-color: $bg-primary;
+    z-index: -100;
+  } */
+
+  .page-title {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+
+  nav {
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1.5rem;
+    max-width: 1600px;
 
     .logo {
-        max-width: 8.2rem;
+      max-width: 8.2rem;
     }
 
     .mobile-navigation {
-        position: relative;
-        background-color: $bg-primary;
-        width: 20.25rem;
-        max-width: 90vw;
-        height: 100vh;
-        padding: 2rem;
-        ul{
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
+      position: relative;
+      background-color: $bg-primary;
+      width: 20.25rem;
+      max-width: 90vw;
+      height: 100vh;
+      padding: 2rem;
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
 
-        .btn-close {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-        }
+      .btn-close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+      }
     }
 
     .desktop-navigation,
     .desktop-menu-container {
-        display: none;
+      display: none;
 
-        @include media-query('tablet') {
-            display: flex;
-            font-size: 1.125rem;
-            gap: 2rem;
-        }
+      @include media-query("tablet") {
+        display: flex;
+        font-size: 1.125rem;
+        gap: 2rem;
+      }
     }
 
     .btn-menu {
-        display: block;
+      display: block;
 
-        @include media-query('tablet') {
-            display: none;
-        }
+      @include media-query("tablet") {
+        display: none;
+      }
     }
-}
+  }
 
-.header-images{
+  .header-images {
     position: relative;
     height: 100%;
-    :last-child{
-        z-index: -1;
-        position: absolute;
-        top: 30%;
-        right: 0;
+    :last-child {
+      z-index: -1;
+      position: absolute;
+      top: 30%;
+      right: 0;
     }
-}
+  }
 }
