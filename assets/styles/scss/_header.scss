@@ -1,7 +1,8 @@
 header {
+  margin-top: 0 !important;
   width: 100%;
   position: relative;
-  .header-wrapper{
+  .header-wrapper {
     position: relative;
     background-color: $bg-primary;
     z-index: -2;
