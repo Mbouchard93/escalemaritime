@@ -1,7 +1,6 @@
 @import "partials/variables";
 @import "partials/mixins";
 
-
 body {
   height: 100%;
   display: flex;
@@ -15,6 +14,7 @@ main {
   flex: 1;
   display: flex;
   flex-direction: column;
+  gap: 2rem;
   max-width: 1600px;
   box-sizing: border-box;
   padding: $p-mobile;

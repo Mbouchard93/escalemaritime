@@ -8,11 +8,19 @@ Template Name: Accueil
     get_header();
 ?>
     
+
 <main>
-<?php 
+
+    <?php 
         get_template_part('/templates/events');
     ?>
+
+    <?php 
+        get_template_part('/templates/map');
+    ?>
+
 </main>
+
 
 <?php 
     get_footer(); 
