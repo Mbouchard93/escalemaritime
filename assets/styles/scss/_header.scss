@@ -1,17 +1,11 @@
 header {
   width: 100%;
-  min-height: 100vh;
-
-  /*   .header__wrapper {
+  position: relative;
+  .header-wrapper{
+    position: relative;
     background-color: $bg-primary;
-    z-index: -100;
-  } */
-
-  .page-title {
-    max-width: 1600px;
-    margin: 0 auto;
+    z-index: -2;
   }
-
   nav {
     margin: 0 auto;
     display: flex;
@@ -23,7 +17,6 @@ header {
     .logo {
       max-width: 8.2rem;
     }
-
     .mobile-navigation {
       position: relative;
       background-color: $bg-primary;
