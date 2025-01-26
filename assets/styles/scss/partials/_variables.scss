@@ -32,6 +32,9 @@ $l-screen: 1024px;
 $xl-screen: 1280px;
 
 /* ------ PADDING ------ */
-$p-mobile: 0 20px;
-$p-tablet: 0 40px;
-$p-desktop: 0 70px;
+$p-mobile: 2rem 20px 0;
+$p-tablet: 3rem 40px 0;
+$p-desktop: 4rem 70px 0;
+
+/* ------ SHADOWS ------ */
+$box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;

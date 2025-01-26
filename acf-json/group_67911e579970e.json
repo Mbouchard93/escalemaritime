@@ -17,7 +17,7 @@
                 "id": ""
             },
             "default_value": "",
-            "maxlength": "",
+            "maxlength": 50,
             "allow_in_bindings": 0,
             "placeholder": "",
             "prepend": "",
@@ -63,8 +63,8 @@
                 "class": "",
                 "id": ""
             },
-            "display_format": "d\/m\/Y",
-            "return_format": "d\/m\/Y",
+            "display_format": "j F Y",
+            "return_format": "j F Y",
             "first_day": 1,
             "allow_in_bindings": 0
         },
@@ -82,8 +82,8 @@
                 "class": "",
                 "id": ""
             },
-            "display_format": "d\/m\/Y",
-            "return_format": "d\/m\/Y",
+            "display_format": "j F Y",
+            "return_format": "j F Y",
             "first_day": 1,
             "allow_in_bindings": 0
         },
@@ -166,5 +166,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1737843927
+    "modified": 1737931178
 }
