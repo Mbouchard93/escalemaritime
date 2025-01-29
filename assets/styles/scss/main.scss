@@ -1,11 +1,17 @@
-@import './partials/variables';
-@import './partials/reset';
-@import 'layout';
-@import './partials/mixins';
-@import './partials/typographie';
+@import "./partials/variables";
+@import "./partials/reset";
+@import "layout";
+@import "./partials/mixins";
+@import "./partials/typographie";
 @import "modules/events";
 @import "modules/bloc_text_image";
-
+@import "header";
+@import "footer";
 @import "./modules/history";
+
+@import "./modules/dialog";
+
 @import "./modules/contact_text";
 @import "./modules/contact_details";
+@import "./modules/map";
+
