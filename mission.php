@@ -18,6 +18,11 @@ Template Name: Historique et mission
         get_template_part('/templates/value');
 ?>
 
+<?php 
+        get_template_part('/templates/vision');
+
+?>
+
 </main>
 
 <?php get_footer(); ?>
