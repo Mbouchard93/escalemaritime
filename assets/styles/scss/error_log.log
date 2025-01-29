@@ -1,3 +1,4 @@
+
 01/25/25 10:08:07: main.scss - Undefined variable $p-mobile: _layout.scss on line 23, at column 3
 Call Stack:
 #0 import _layout.scss main.scss on line 3
@@ -16,3 +17,4 @@ Call Stack:
 01/26/25 8:53:54: main.scss - Undefined mixin breakpoint: modules/_events.scss on line 5, at column 3
 Call Stack:
 #0 import modules/_events.scss main.scss on line 6
+

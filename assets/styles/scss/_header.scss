@@ -1,11 +1,13 @@
 header {
   margin-top: 0 !important;
   width: 100%;
-  position: relative;
+
   .header-wrapper {
-    position: relative;
-    background-color: $bg-primary;
-    z-index: -2;
+    display: flex;
+    flex-direction: column;
+    :first-of-type, h1{
+      place-self: center;
+    }
   }
   nav {
     margin: 0 auto;
@@ -61,11 +63,17 @@ header {
   .header-images {
     position: relative;
     height: 100%;
+    max-width: 1600px;
+    width: 100%;
     :last-child {
       z-index: -1;
       position: absolute;
       top: 30%;
       right: 0;
     }
+  }
+  .sub-navigation{
+   display: flex;
+   gap: 1rem;
   }
 }

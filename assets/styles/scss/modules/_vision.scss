@@ -1,0 +1,54 @@
+.vision-section {
+    padding: 5%;
+    min-width: 500px;
+    min-height: auto;
+    max-width: 1600px;
+    max-height: auto;
+
+    h3 {
+        padding: 10px 0;
+    }
+
+    p {
+        padding: 20px 0;
+    }
+
+    .vision-text {
+        background-color: beige; //Changer ou enlever cette ligne
+        display: flex;
+        flex-direction: column;
+        padding: 4%;
+    }
+
+    @include media-query('tablet') {
+        display: flex;
+        flex-direction: row-reverse;
+
+        .vision-image-wrapper, .vision-text {
+            width: 50%;
+            height: auto;
+        }
+    }
+
+    @include media-query('desktop') {
+        display: flex;
+        flex-direction: row-reverse;
+
+        .vision-image-wrapper, .vision-text {
+            width: 50%;
+            height: auto;
+        }
+    }
+
+    @include media-query('desktop-xl') {
+        display: flex;
+        flex-direction: row-reverse;
+
+        .vision-image-wrapper, .vision-text {
+            width: 50%;
+            height: auto;
+        }
+    }
+
+
+}
