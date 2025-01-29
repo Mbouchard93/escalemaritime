@@ -21,6 +21,7 @@
                     while ($events->have_posts()) : $events->the_post();
             ?>
 
+
             <div class="event">
                 <div class="event__title">
                 <h3><?php the_field('event_title'); ?></h3></div>
