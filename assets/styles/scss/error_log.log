@@ -1,6 +1,2 @@
-01/25/25 10:08:07: main.scss - Undefined variable $p-mobile: _layout.scss on line 23, at column 3
-Call Stack:
-#0 import _layout.scss main.scss on line 3
-01/25/25 10:10:08: main.scss - Undefined mixin media-query: _layout.scss on line 29, at column 3
-Call Stack:
-#0 import _layout.scss main.scss on line 3
+
+01/28/25 4:45:45: main.scss - unclosed block: failed at `` /Applications/XAMPP/xamppfiles/htdocs/escalemaritime/wp-content/themes/escalemaritime/assets/styles/scss/./modules/_contact_details.scss on line 114, at column 0
