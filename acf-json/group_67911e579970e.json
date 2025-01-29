@@ -51,8 +51,27 @@
         },
         {
             "key": "field_6791382eba5c6",
-            "label": "date de l'événement",
+            "label": "Date de l'événement",
             "name": "event_date",
+            "aria-label": "",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "d\/m\/Y",
+            "return_format": "d\/m\/Y",
+            "first_day": 1,
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_679564b46eeaa",
+            "label": "Date de fin de l'événement (optionnel)",
+            "name": "event_end_date",
             "aria-label": "",
             "type": "date_picker",
             "instructions": "",
@@ -82,7 +101,7 @@
                 "class": "",
                 "id": ""
             },
-            "display_format": "g:i a",
+            "display_format": "H:i",
             "return_format": "g:i a",
             "allow_in_bindings": 0
         },
@@ -112,7 +131,7 @@
             "label": "Coût",
             "name": "event_cost",
             "aria-label": "",
-            "type": "number",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -122,11 +141,9 @@
                 "id": ""
             },
             "default_value": "",
-            "min": "",
-            "max": "",
-            "allow_in_bindings": 0,
+            "maxlength": "",
+            "allow_in_bindings": 1,
             "placeholder": "",
-            "step": "",
             "prepend": "",
             "append": ""
         }
@@ -149,5 +166,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1737648854
+    "modified": 1737843927
 }
