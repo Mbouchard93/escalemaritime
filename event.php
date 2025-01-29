@@ -9,6 +9,7 @@ Template Name: Événements
 <main>
     <?php 
         get_template_part('/templates/events');
+        
     ?>
 </main>
 
