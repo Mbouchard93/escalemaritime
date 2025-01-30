@@ -1,0 +1,127 @@
+.contact-section {
+    padding: 2rem;
+
+    h2 {
+        text-align: center;
+    }
+
+    .bold {
+        font-weight: bold;
+    }
+
+    .contact-section__details {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .contact-section__details-wrapper, .contact-section__image-wrapper {
+        min-height: 50rem; /* Hauteur 700px ou 90%*/
+        min-width: 14.6rem; /* largeur 960px ou 70%*/
+        max-height: 40rem;
+        max-width: 29rem;
+        border: 2px solid tomato
+    }
+
+    .contact-section__details-wrapper {
+        background-color: $white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 2rem;
+        padding: 8%;
+    }
+
+    .contact-section__image-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image_contact {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .contact-item__heading {
+        display: flex;
+        gap: 0 0.5rem;
+    }
+
+    .contact-item__icon-wrapper {
+        height: 1.25rem;
+        width: 1.25rem;
+        // object-fit: contain;
+    }
+
+    .contact-hours {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .contact-hours__grid {
+        display: flex;
+        justify-content: space-around;
+        gap: 2rem;
+    }
+
+    .contact-section__text-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    @include media-query('tablet') {
+        background-color: green;
+
+        .contact-section__details-wrapper {
+            padding: 5%;
+        }
+    }
+
+    @include media-query('desktop') {
+        background-color: brown;
+
+        .contact-section__details {
+            flex-direction: row;
+            width: 1080px;
+            height: fit-content;
+        }
+
+        .contact-section__details-wrapper, .contact-section__image-wrapper {
+            min-height: 40rem;
+            min-width: 29rem;
+            max-height: 50rem;
+            max-width: 36.5rem;
+        }
+
+        .contact-section__details-wrapper {
+            padding: 5%;
+        }
+    }
+
+    @include media-query('desktop-xl') {
+        background-color: yellow;
+
+        .contact-section__details {
+            flex-direction: row;
+            width: 1080px;
+            height: fit-content;
+        }
+
+        .contact-section__details-wrapper, .contact-section__image-wrapper {
+            min-height: 40rem;
+            min-width: 29rem;
+            max-height: 50rem;
+            max-width: 36.5rem;
+        }
+
+        .contact-section__details-wrapper {
+            padding: 3%;
+        }
+    }
+}
