@@ -1,57 +1,74 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap');
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+html {
+  margin: 0 !important;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-ol, ul {
-    list-style: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ol,
+ul {
+  list-style: none;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 body {
-    font-family: 'Nunito', sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    color: $color-primary;
+  font-family: $nunito;
+  font-size: 16px;
+  line-height: 1.5;
+  color: $color-primary;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Cormorant Garamond', sans-serif;
-    font-weight: 600;
-    color: $color-primary;
+h1,
+h2,
+h4,
+h5,
+h6 {
+  font-family: $garamond;
+  font-weight: 600;
+  color: $color-primary;
 }
 
 h1 {
-    font-size: 2.5rem;
+  font-size: 2.5rem;
 }
 
 h2 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 h3 {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 h4 {
-    font-size: 1.25rem;
+  font-size: 1.25rem;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
+h3 {
+  font-family: $nunito;
+  font-weight: 900;
 }
+
+
+button, input{
+  font-family: $nunito;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+

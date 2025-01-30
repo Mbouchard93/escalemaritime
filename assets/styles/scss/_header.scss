@@ -1,0 +1,79 @@
+header {
+  margin-top: 0 !important;
+  width: 100%;
+
+  .header-wrapper {
+    display: flex;
+    flex-direction: column;
+    :first-of-type, h1{
+      place-self: center;
+    }
+  }
+  nav {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    max-width: 1600px;
+
+    .logo {
+      max-width: 8.2rem;
+    }
+    .mobile-navigation {
+      position: relative;
+      background-color: $bg-primary;
+      width: 20.25rem;
+      max-width: 90vw;
+      height: 100vh;
+      padding: 2rem;
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .btn-close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+      }
+    }
+
+    .desktop-navigation,
+    .desktop-menu-container {
+      display: none;
+
+      @include media-query("tablet") {
+        display: flex;
+        font-size: 1.125rem;
+        gap: 2rem;
+      }
+    }
+
+    .btn-menu {
+      display: block;
+
+      @include media-query("tablet") {
+        display: none;
+      }
+    }
+  }
+
+  .header-images {
+    position: relative;
+    height: 100%;
+    max-width: 1600px;
+    width: 100%;
+    :last-child {
+      z-index: -1;
+      position: absolute;
+      top: 30%;
+      right: 0;
+    }
+  }
+  .sub-navigation{
+   display: flex;
+   gap: 1rem;
+  }
+}
