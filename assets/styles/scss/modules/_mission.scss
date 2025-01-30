@@ -14,14 +14,13 @@
     }
 
     .mission-text {
-        background-color: beige;
+        background-color: $white;
         display: flex;
         flex-direction: column;
         padding: 4%;
     }
 
     @include media-query('tablet') {
-        background-color: yellow;
         display: flex;
         flex-direction: row-reverse;
 
@@ -32,7 +31,6 @@
     }
 
     @include media-query('desktop') {
-        background-color: lightblue;
         display: flex;
         flex-direction: row-reverse;
 
@@ -43,7 +41,6 @@
     }
 
     @include media-query('desktop-xl') {
-        background-color: tomato;
         display: flex;
         flex-direction: row-reverse;
 
