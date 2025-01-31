@@ -14,6 +14,20 @@ function create_posttype() {
             'supports' => array('title', 'id'),   
         )
     );
+    register_post_type('teams',
+        array(
+            'labels' => array(
+                'name' => __('Équipes'),
+                'singular_name' => __('Équipe')
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'menu_icon' => 'dashicons-groups',
+            'rewrite' => array('slug' => 'teams'),
+            'show_in_rest' => true,
+            'supports' => array('title', 'id'),   
+        )
+    );
 }
 
 function remove_wysiwyg() {
