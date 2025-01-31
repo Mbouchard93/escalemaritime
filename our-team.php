@@ -9,6 +9,7 @@ Template Name: Notre équipe
 <main>
 <?php get_template_part('/templates/module_teams') ?>
 <?php get_template_part('/templates/teams') ?>
+<?php get_template_part('/templates/partners') ?>
 
 </main>
 
