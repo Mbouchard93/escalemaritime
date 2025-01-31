@@ -11,9 +11,10 @@ Template Name: Accueil
 
 <main>
 
-    <?php 
-        get_template_part('/templates/events');
-    ?>
+<?php 
+    $events_limit = 6;
+    include get_template_directory() . '/templates/events.php'; 
+?>
 
     <?php 
         get_template_part('/templates/map');
