@@ -1,0 +1,123 @@
+.about-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 723px;
+    max-height: auto;
+
+    .about-title-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-image: url("../../../assets/images/bg_about_escale.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 350px;
+    }
+
+    .about-icon {
+        width: 50px;
+        height: auto;
+    }
+
+    .content-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: $white;
+
+        h3 {
+            color: $white;
+        }
+    }
+
+    .content-text {
+        // width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        background-color: $blue-navy-primary;
+        text-align: center;
+        padding: 5%;
+    }
+
+    .content-image {
+        // width: 50%;
+        height: auto;
+    }
+
+    .content-button {
+        background-color: transparent;
+        border-color: #7DCFB6;
+        border-radius: 8px;
+        cursor: pointer;
+        padding: 1rem;
+    }
+
+    @include media-query('tablet') {
+        .content-block {
+            flex-direction: row-reverse;
+        }
+
+        .content-block-education {
+            flex-direction: row;
+        }
+
+        .content-text {
+            width: 50%;
+            height: auto;
+        }
+
+        .content-image {
+            width: 50%;
+            height: auto;
+        }
+    }
+
+    @include media-query('desktop') {
+        .content-block {
+            flex-direction: row-reverse;
+        }
+
+        .content-block-education {
+            flex-direction: row;
+        }
+
+        .content-text {
+            width: 50%;
+            height: auto;
+        }
+
+        .content-image {
+            width: 50%;
+            height: auto;
+        }
+    }
+
+    @include media-query('desktop-xl') {
+        .content-block {
+            flex-direction: row-reverse;
+        }
+
+        .content-block-education {
+            flex-direction: row;
+        }
+
+        .content-text {
+            width: 50%;
+            height: auto;
+        }
+
+        .content-image {
+            width: 50%;
+            height: auto;
+        }
+    }
+}
+
+

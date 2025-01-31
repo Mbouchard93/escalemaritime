@@ -4,12 +4,14 @@ Template Name: Accueil
 */
 ?>
 
-<?php 
-    get_header();
-?>
-    
 
+<?php get_header(); ?>
+
+    
 <main>
+    <?php 
+        get_template_part('/templates/about_section');
+    ?>
 
 <?php 
     $events_limit = 6;
@@ -26,3 +28,4 @@ Template Name: Accueil
 <?php 
     get_footer(); 
 ?>
+
