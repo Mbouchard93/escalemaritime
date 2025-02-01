@@ -28,6 +28,20 @@ function create_posttype() {
             'supports' => array('title', 'id'),   
         )
     );
+    register_post_type('partners',
+        array(
+            'labels' => array(
+                'name' => __('Partenaires'),
+                'singular_name' => __('Partenaire')
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'menu_icon' => 'dashicons-businessman',
+            'rewrite' => array('slug' => 'partners'),
+            'show_in_rest' => true,
+            'supports' => array('title', 'id'),   
+        )
+    );
 }
 
 function remove_wysiwyg() {
