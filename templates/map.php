@@ -1,12 +1,14 @@
-<!-- <?php
+<?php
+// Initialise la variable $locations
+$locations = array(); // Toujours initialiser avant d'ajouter des données
+
 // Récupérer tous les partenaires (post type "partenaires", par exemple)
 $partenaires = new WP_Query(array(
-    'post_type' => 'partenaires', // Remplace par le nom de ton post type
+    'post_type' => 'partners', // Remplace par le nom de ton post type
     'posts_per_page' => -1, // Tous les partenaires
 ));
 
 if ($partenaires->have_posts()) {
-    $locations = array(); // Tableau pour les données Leaflet
     while ($partenaires->have_posts()) {
         $partenaires->the_post();
 
@@ -31,16 +33,16 @@ if ($partenaires->have_posts()) {
     }
     wp_reset_postdata();
 }
+
 ?>
 
 
 <script>
   var locations = <?php echo json_encode($locations); ?>;
-  console.log(locations);
 </script>
-<script src="../../../assets/js/map.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/map.js"></script>
 
- -->
+
 
 <section class="map">
     <div class="map__container">
