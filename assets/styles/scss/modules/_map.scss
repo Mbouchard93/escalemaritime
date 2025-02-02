@@ -20,6 +20,11 @@
     @include media-query("desktop") {
       gap: 3rem;
     }
+
+    #map {
+      height: 600px;
+      width: 1000px;
+    }
   }
 
   h2 {
