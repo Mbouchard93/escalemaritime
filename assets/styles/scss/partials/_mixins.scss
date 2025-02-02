@@ -31,4 +31,12 @@
   border-radius: 20px;
   font-weight: 800;
   border: none;
+  transition: all 0.3s;
+  box-shadow: transparent 1.95px 1.95px 2.6px;
+
+  &:hover,
+  &:focus {
+    background-color: $color-cta-dark;
+    box-shadow: $box-shadow;
+  }
 }
