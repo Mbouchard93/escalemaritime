@@ -121,16 +121,33 @@ $events_limit = isset($events_limit) ? $events_limit : -1;
                 <button class="event__modal-btn-close btn-close">X</button>
                 <div class="event__modal-infos">
                     <h2><?php the_field('event_full_title', $event_id); ?></h2>
+                    <div class="event__modal-infos-major">
+                        <div>
+                            <span class="material-symbols-outlined">
+                                calendar_month
+                            </span>
+                            <p>
+                            <?php 
+                            $event_date = get_field('event_date', $event_id);
+                            $event_hour = get_field('event_hour', $event_id);
+                            echo format_event_date($event_date) . ", " . esc_html($event_hour);
+                            ?>
+                            </p>
+                        </div>
+                        <div>
+                            <span class="material-symbols-outlined">
+                                location_on
+                            </span>
+                            <p><?php the_field('event_adress', $event_id); ?></p>
+                        </div>
+                        <div>
+                        <span class="material-symbols-outlined">
+                            attach_money
+                        </span>
+                            <p><?php the_field('event_cost', $event_id); ?></p>
+                        </div>
+                    </div>
                     <p><?php the_field('event_description', $event_id); ?></p>
-                    <p><strong>Adresse:</strong> <?php the_field('event_adress', $event_id); ?></p>
-                    <p><strong>Coût:</strong> <?php the_field('event_cost', $event_id); ?></p>
-                    <p>
-                        <?php 
-                        $event_date = get_field('event_date', $event_id);
-                        $event_hour = get_field('event_hour', $event_id);
-                        echo format_event_date($event_date) . ", " . esc_html($event_hour);
-                        ?>
-                    </p>
                 </div>
                 <button class="event__modal-btn-fb">
                     <a href="<?php echo esc_url(get_field('event_btn_link', $event_id)); ?>" target="_blank"><?php the_field('event_btn_label', $event_id); ?></a>
@@ -141,7 +158,7 @@ $events_limit = isset($events_limit) ? $events_limit : -1;
         <?php endforeach; wp_reset_postdata(); ?>
         </div>
     <?php else : ?>
-        <p class="no-events">Aucun événement à venir</p>
+        <h3 class="no-events">Aucun événement prévu pour l'instant. Revenez plus tard !</h3>
     <?php endif; ?>
     <?php if (is_front_page() && $events_limit > 0) : ?>
     <div class="events__btn">
@@ -199,31 +216,33 @@ $events_limit = isset($events_limit) ? $events_limit : -1;
                 <button class="event__modal-btn-close btn-close">X</button>
                 <div class="event__modal-infos">
                     <h2><?php the_field('event_full_title', $event_id); ?></h2>
+                    <div class="event__modal-infos-major">
+                        <div>
+                            <span class="material-symbols-outlined">
+                                calendar_month
+                            </span>
+                            <p>
+                            <?php 
+                            $event_date = get_field('event_date', $event_id);
+                            $event_hour = get_field('event_hour', $event_id);
+                            echo format_event_date($event_date) . ", " . esc_html($event_hour);
+                            ?>
+                            </p>
+                        </div>
+                        <div>
+                            <span class="material-symbols-outlined">
+                                location_on
+                            </span>
+                            <p><?php the_field('event_adress', $event_id); ?></p>
+                        </div>
+                        <div>
+                        <span class="material-symbols-outlined">
+                            attach_money
+                        </span>
+                            <p><?php the_field('event_cost', $event_id); ?></p>
+                        </div>
+                    </div>
                     <p><?php the_field('event_description', $event_id); ?></p>
-                    <div>
-                        <span class="material-symbols-outlined">
-                            calendar_month
-                        </span>
-                        <p>
-                        <?php 
-                        $event_date = get_field('event_date', $event_id);
-                        $event_hour = get_field('event_hour', $event_id);
-                        echo format_event_date($event_date) . ", " . esc_html($event_hour);
-                        ?>
-                        </p>
-                    </div>
-                    <div>
-                        <span class="material-symbols-outlined">
-                            location_on
-                        </span>
-                        <p><?php the_field('event_adress', $event_id); ?></p>
-                    </div>
-                    <div>
-                    <span class="material-symbols-outlined">
-                        attach_money
-                    </span>
-                        <p><?php the_field('event_cost', $event_id); ?></p>
-                    </div>
                 </div>
                 <button class="event__modal-btn-fb">
                     <a href="<?php echo esc_url(get_field('event_btn_link', $event_id)); ?>" target="_blank"><?php the_field('event_btn_label', $event_id); ?></a>

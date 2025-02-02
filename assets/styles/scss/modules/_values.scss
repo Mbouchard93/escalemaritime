@@ -1,0 +1,36 @@
+.values {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 2rem;
+
+  @include media-query("desktop") {
+    padding: 2rem 4rem;
+  }
+
+  h3,
+  p {
+    text-align: center;
+  }
+
+  &__cards {
+    display: grid;
+    gap: 1.5rem;
+
+    @include media-query("desktop") {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    > div {
+      background-color: $white;
+      color: $black;
+      padding: 2rem 1rem;
+      box-shadow: $box-shadow;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  }
+}
