@@ -4,7 +4,7 @@
   background-size: cover;
   background-position: top center;
   width: 100%;
-  padding: 30% 1rem 20%;
+  padding: 20% 1rem 5%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,8 +22,18 @@
     }
 
     #map {
-      height: 600px;
-      width: 1000px;
+      height: 200px;
+      width: 300px;
+
+      @include media-query("tablet") {
+        height: 400px;
+        width: 600px;
+      }
+
+      @include media-query("desktop") {
+        height: 600px;
+        width: 1000px;
+      }
     }
   }
 
