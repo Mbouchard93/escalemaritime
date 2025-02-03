@@ -13,13 +13,16 @@ Template Name: Accueil
         get_template_part('/templates/about_section');
     ?>
 
-    <?php 
-        get_template_part('/templates/events');
-    ?>
+<?php 
+    $events_limit = 6;
+    include get_template_directory() . '/templates/events.php'; 
+?>
 
     <?php 
         get_template_part('/templates/map');
     ?>
+
+    <?php get_template_part('/templates/banner_partners') ?>
 
 </main>
 

@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script type="text/javascript" src="https://www.juicer.io/embed/un-zeste-de-clementine-1fd227a4-3dc7-444f-bd0b-bc80d0b1a054/embed-code.js" async defer></script>
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/leaflet.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <title>L'Escale Maritime de Trois-Pistoles</title>
     <?php wp_head(); ?>
 </head>
 <body>
