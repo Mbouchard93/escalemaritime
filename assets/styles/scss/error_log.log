@@ -18,3 +18,9 @@ Call Stack:
 Call Stack:
 #0 import modules/_events.scss main.scss on line 6
 
+02/03/25 7:41:32: main.scss - Undefined variable $color-light: _header.scss on line 150, at column 3
+Call Stack:
+#0 import _header.scss main.scss on line 8
+02/03/25 7:41:42: main.scss - Undefined variable $color-light: _header.scss on line 150, at column 3
+Call Stack:
+#0 import _header.scss main.scss on line 8
