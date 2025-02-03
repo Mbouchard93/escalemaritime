@@ -1,9 +1,6 @@
 <section class="banner_partners">
     <h2>Nos partenaires</h2>
-    <div class="slider-container">
-        <button class="control--previous">
-            <span class="material-symbols-outlined">arrow_back_ios</span> 
-        </button>  
+    <div class="slider"> 
         <ul class="slider_slides">
             <?php 
                 $bannerPartners = new WP_Query([
@@ -13,9 +10,9 @@
 
                 if ($bannerPartners->have_posts()) :
                     while ($bannerPartners->have_posts()) : $bannerPartners->the_post();
-                        $image = get_field('img_partners');
+                        $image = get_field('partner_logo');
                         $imageUrl = $image['url'];
-                        $url = get_field('url') ;
+                        $url = get_field('partner_link') ;
                 ?>
 
                 <li class="slider_slide">
@@ -29,7 +26,10 @@
                 endif;
             ?>
         </ul>
-        <button class="control--next">
+        <button class="prev">
+            <span class="material-symbols-outlined">arrow_back_ios</span> 
+        </button> 
+        <button class="next">
             <span class="material-symbols-outlined">arrow_forward_ios</span>
         </button>
 
