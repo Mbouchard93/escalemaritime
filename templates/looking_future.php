@@ -1,11 +1,11 @@
+<div class="looking-future__bg-top"></div>
 <section class="looking-future">
-    <div class="looking-future__bg-top"></div>
     <div class="looking-future__section">
         <div class="looking-future__content">
             <h2 class="looking-future__title">
                 <?php the_field('looking_future_title'); ?>
             </h2>
-            <p class="looking-future__text">
+            <p class="looking-future__text padding-right">
                 <?php the_field('looking_future_text_1'); ?>
             </p>
         </div>
@@ -19,9 +19,9 @@
             <?php endif; ?>
         </div>
     </div>
-    <div class="looking-future__section">
+    <div class="looking-future__section row-reverse">
         <div class="looking-future__content">
-            <p class="looking-future__text">
+            <p class="looking-future__text padding-left">
             <?php the_field('looking_future_text_2'); ?>
             </p>
         </div>

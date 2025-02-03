@@ -1,12 +1,93 @@
-.looking-future {
-    // background-color: $blue-light-secondary;
+.looking-future__bg-top {
+    background-image: url("../../../assets/images/bg_top_looking_future.svg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    width: auto;
+    height: 20px;
+}
 
-    .looking-future__bg-top {
-        background-image: url("../../../assets/images/bg_top_looking_future.svg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        width: auto;
-        height: 50px;
+.looking-future {
+    padding: 5%;
+    background-color: $blue-light-secondary;
+    
+
+    .looking-future__section {
+        padding: 2rem 0;
     }
+
+    .looking-future__title {
+        padding: 0 0 2rem 0;
+    }
+
+    .looking-future__text {
+        padding: 0 0 2rem 0;
+    }
+
+    .looking-future__image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @include media-query('desktop') {
+        .looking-future__section {
+            display: flex;
+            width: auto;
+            height: auto;
+        }
+
+        .looking-future__content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .looking-future__image-container, .looking-future__content {
+            width: 50%;
+            height: auto;
+        }
+
+        .padding-left {
+            padding-left: 2rem;
+        }
+
+        .padding-right {
+            padding-right: 2rem;
+        }
+
+        .row-reverse {
+            flex-direction: row-reverse;
+        }
+    }
+
+    @include media-query('desktop-xl') {
+        .looking-future__section {
+            display: flex;
+            width: auto;
+            height: auto;
+        }
+
+        .looking-future__content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .looking-future__image-container, .looking-future__content {
+            width: 50%;
+            height: auto;
+        }
+
+        .padding-left {
+            padding-left: 2rem;
+        }
+
+        .row-reverse {
+            flex-direction: row-reverse;
+        }
+    }
+
 }
