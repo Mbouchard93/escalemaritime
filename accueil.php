@@ -21,7 +21,9 @@ Template Name: Accueil
     <?php 
         get_template_part('/templates/map');
     ?>
-
+    <section class="banner_accueil">
+    <?php get_template_part('/templates/banner') ?>
+    </section>
     <?php get_template_part('/templates/banner_partners') ?>
 
 </main>

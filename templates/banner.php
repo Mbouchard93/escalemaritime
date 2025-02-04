@@ -1,5 +1,14 @@
-<section class="banner">
+<div class="content_banner">
+<?php 
+    $image = get_field('banner_img');
+    if ($image) :
+        $image_url = $image['url'];
+    ?>
+        <img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title(); ?>">
+    <?php endif; ?>
     <h2><?php the_field('banner_title')?></h2>
     <p><?php the_field('banner_text')?></p>
-    <a href="<?php the_field('banner_link_button')?>"><?php the_field('banner_button')?></a>
-</section>
+    <a class="btn" href="<?php echo get_field('banner_button')['link']; ?>">
+        <?php echo get_field('banner_button')['label']; ?>
+    </a>
+</div>
