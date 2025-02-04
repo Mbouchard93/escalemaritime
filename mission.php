@@ -22,7 +22,7 @@ Template Name: Historique et mission
         get_template_part('/templates/vision');
 
 ?>
-
+   <?php get_template_part('/templates/banner_partners') ?>
 </main>
 
 <?php get_footer(); ?>
