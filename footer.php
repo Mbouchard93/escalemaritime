@@ -1,4 +1,4 @@
-<footer>
+<footer class="<?php if (is_page_template('our-team.php')) echo 'footer-team'; ?>">
     <div class="container">
         <div class="content">
             <a href="<?php echo site_url(); ?>">
