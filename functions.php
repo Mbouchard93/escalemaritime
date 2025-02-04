@@ -54,5 +54,6 @@ add_action('init', 'remove_wysiwyg');
 wp_enqueue_script( 'dialog', get_template_directory_uri() . '/assets/js/dialog.js');
 wp_enqueue_script( 'leaflet', get_template_directory_uri() . '/assets/js/leaflet.js');
 wp_enqueue_script( 'map', get_template_directory_uri() . '/assets/js/map.js');
+wp_enqueue_script( 'slider', get_template_directory_uri() . '/assets/js/slider.js');
 
 ?>

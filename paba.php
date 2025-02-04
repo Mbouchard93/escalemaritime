@@ -15,7 +15,7 @@ Template Name: PABA
 <?php 
         get_template_part('/templates/looking_future');
 ?>
-
+   <?php get_template_part('/templates/banner_partners') ?>
 </main>
 
 <?php get_footer(); ?>
