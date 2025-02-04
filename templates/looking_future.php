@@ -1,5 +1,5 @@
-<div class="looking-future__bg-top"></div>
 <section class="looking-future">
+    <div class="looking-future__bg-top"></div>
     <div class="looking-future__section">
         <div class="looking-future__content">
             <h2 class="looking-future__title">
