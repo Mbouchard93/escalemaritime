@@ -1,8 +1,13 @@
 .contact-section {
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     h2 {
         text-align: center;
+        padding-bottom: 2rem;
     }
 
     .bold {
@@ -18,31 +23,33 @@
     }
 
     .contact-section__details-wrapper, .contact-section__image-wrapper {
-        min-height: 50rem; /* Hauteur 700px ou 90%*/
-        min-width: 14.6rem; /* largeur 960px ou 70%*/
-        max-height: 40rem;
-        max-width: 29rem;
-        border: 2px solid tomato
+        width: 375px;
+        height: 800px;
     }
 
     .contact-section__details-wrapper {
         background-color: $white;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: space-evenly;
         gap: 2rem;
-        padding: 8%;
+        padding: 2rem;
     }
 
     .contact-section__image-wrapper {
         display: flex;
         justify-content: center;
         align-items: center;
+        overflow: hidden;
+    }
+
+    .contact-hours__title {
+        padding-bottom: 1rem;
     }
 
     .image_contact {
-        max-width: 100%;
-        max-height: 100%;
+        min-width: 100%;
+        min-height: 100%;
     }
 
     .contact-item__heading {
@@ -51,9 +58,8 @@
     }
 
     .contact-item__icon-wrapper {
-        height: 1.25rem;
         width: 1.25rem;
-        // object-fit: contain;
+        height: 1.25rem;
     }
 
     .contact-hours {
@@ -75,53 +81,39 @@
         text-align: center;
     }
 
-    @include media-query('tablet') {
-        background-color: green;
+    @include media-query('mobile') {
+        .contact-section__details-wrapper, .contact-section__image-wrapper {
+            width: 500px;
+            height: 700px;
+        }
+    }
 
-        .contact-section__details-wrapper {
-            padding: 5%;
+    @include media-query('tablet') {
+        .contact-section__details-wrapper, .contact-section__image-wrapper {
+            width: 600px;
+            height: 650px;
         }
     }
 
     @include media-query('desktop') {
-        background-color: brown;
-
         .contact-section__details {
             flex-direction: row;
-            width: 1080px;
-            height: fit-content;
         }
 
         .contact-section__details-wrapper, .contact-section__image-wrapper {
-            min-height: 40rem;
-            min-width: 29rem;
-            max-height: 50rem;
-            max-width: 36.5rem;
+            width: 450px;
+            height: 700px;
         }
 
         .contact-section__details-wrapper {
-            padding: 5%;
+            padding: 2rem;
         }
     }
 
     @include media-query('desktop-xl') {
-        background-color: yellow;
-
-        .contact-section__details {
-            flex-direction: row;
-            width: 1080px;
-            height: fit-content;
-        }
-
         .contact-section__details-wrapper, .contact-section__image-wrapper {
-            min-height: 40rem;
-            min-width: 29rem;
-            max-height: 50rem;
-            max-width: 36.5rem;
-        }
-
-        .contact-section__details-wrapper {
-            padding: 3%;
+            width: 550px;
+            height: 700px;
         }
     }
 }
