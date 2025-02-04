@@ -1,0 +1,36 @@
+.banner_accueil{
+background-color: $bg-primary;
+.content_banner{
+    padding: 4rem 0;
+    color: $color-primary;
+}
+}
+
+.banner_teams{
+    
+    max-width: 1600px;
+    width: 100%;
+    background-repeat: no-repeat;
+    height: 400px;
+    background-image: url("../../../assets/images/bg_partners.svg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .content_banner{
+        padding-top:4rem ;
+        @include media-query("tablet"){
+            padding-top:2rem ;
+        }
+    }
+}
+
+.content_banner{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    .btn{
+        @include button-base;
+        width: fit-content;
+    }
+}
