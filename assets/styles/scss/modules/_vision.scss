@@ -1,61 +1,75 @@
 .vision-section {
-    padding: 5%;
-    min-width: 500px;
-    min-height: auto;
-    max-width: 1600px;
-    max-height: auto;
-
-    h3 {
-        padding: 10px 0;
-    }
-
-    p {
-        padding: 20px 0;
-    }
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     .vision-text {
-        background-color: beige; //Changer ou enlever cette ligne
         display: flex;
         flex-direction: column;
-        padding: 4%;
+        justify-content: space-evenly;
+    }
+
+    .vision-image-wrapper, .vision-text {
+        width: 350px;
+        height: 400px;
+    }
+
+    .vision-image-wrapper {
+        overflow: hidden;
+    }
+
+    .vision-image {
+        min-width: 100%;
+        min-height: 100%;
+    }
+
+    @include media-query('mobile') {
+        .vision-image-wrapper, .vision-text {
+            width: 450px;
+            height: 400px;
+        }
     }
 
     @include media-query('tablet') {
-        display: flex;
-        flex-direction: row-reverse;
-
         .vision-image-wrapper, .vision-text {
-            width: 50%;
-            height: auto;
+            width: 600px;
+            height: 400px;
+        }
+
+        .vision-text {
+            padding: 1rem;
         }
     }
 
     @include media-query('desktop') {
-        display: flex;
-        flex-direction: row-reverse;
+        flex-direction: row;
+        width: 800px;
+        height: 400px;
 
         .vision-image-wrapper, .vision-text {
-            width: 50%;
-            height: auto;
+            width: 400px;
+            height: 400px;
         }
 
-        .vision-image-wrapper {
-            width: 50%;
-            height: auto;
-            img{
-                width: 100%;
-                height: 100%;
-            }
+        .vision-text {
+            padding: 1rem;
         }
     }
 
     @include media-query('desktop-xl') {
-        display: flex;
-        flex-direction: row-reverse;
+        flex-direction: row;
+        width: 1200px;
+        height: 500px;
 
         .vision-image-wrapper, .vision-text {
-            width: 50%;
-            height: auto;
+            width: 600px;
+            height: 500px;
+        }
+
+        .vision-text {
+            padding: 1rem;
         }
     }
 

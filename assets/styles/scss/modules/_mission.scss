@@ -1,52 +1,75 @@
 .mission-section {
-    padding: 5%;
-    min-width: 500px;
-    min-height: auto;
-    max-width: 1600px;
-    max-height: auto;
-
-    h3 {
-        padding: 10px 0;
-    }
-
-    p {
-        padding: 20px 0;
-    }
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     .mission-text {
-        background-color: $white;
         display: flex;
         flex-direction: column;
-        padding: 4%;
+        justify-content: space-evenly;
     }
 
-    @include media-query('tablet') {
-        display: flex;
-        flex-direction: row-reverse;
+    .mission-image-wrapper, .mission-text {
+        width: 350px;
+        height: 400px;
+    }
 
+    .mission-image-wrapper {
+        overflow: hidden;
+    }
+
+    .mission-img {
+        min-width: 100%;
+        min-height: 100%;
+    }
+
+    @include media-query('mobile') {
         .mission-image-wrapper, .mission-text {
-            width: 50%;
-            height: auto;
+            width: 450px;
+            height: 400px;
         }
     }
 
-    @include media-query('desktop') {
-        display: flex;
-        flex-direction: row-reverse;
-
+    @include media-query('tablet') {
         .mission-image-wrapper, .mission-text {
-            width: 50%;
-            height: auto;
+            width: 600px;
+            height: 400px;
+        }
+
+        .mission-text {
+            padding: 1rem;
+        }
+    } 
+
+    @include media-query('desktop') {
+        flex-direction: row-reverse;
+        width: 800px;
+        height: 400px;
+    
+        .mission-image-wrapper, .mission-text {
+            width: 400px;
+            height: 400px;
+        }
+        
+        .mission-text {
+            padding: 1rem;
         }
     }
 
     @include media-query('desktop-xl') {
-        display: flex;
         flex-direction: row-reverse;
-
+        width: 1200px;
+        height: 500px;
+    
         .mission-image-wrapper, .mission-text {
-            width: 50%;
-            height: auto;
+            width: 600px;
+            height: 500px;
+        }
+        
+        .mission-text {
+            padding: 1rem;
         }
     }
 
