@@ -1,4 +1,5 @@
 <section class="about-section">
+    <!-- section du titre et image du fond -->
     <div class="about-title-container">
         <div>
             <?php
@@ -10,7 +11,7 @@
             <?php endif; ?>
         </div>
         <h2>
-        <?php the_field('about_title'); ?>
+            <?php the_field('about_title'); ?>
         </h2>
     </div>
     <div class="content-block">
@@ -28,7 +29,7 @@
             if ($image) :
                 $image_url = is_array($image) ? $image['url'] : $image;
             ?>
-                <img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title(); ?>">
+                <img class="about-section__image" src="<?php echo esc_url($image_url); ?>" alt="<?php the_title(); ?>">
             <?php endif; ?>
         </div>
     </div>
@@ -40,7 +41,7 @@
             <p>
                 <?php the_field('text_2'); ?>
             </p>
-            <button class="content-button">
+            <button class="content-button white">
                 <a href="<?php echo get_field('about_btn_more')['link_btn']; ?>">
                     <?php echo get_field('about_btn_more')['label_btn']; ?>
                 </a>
@@ -52,7 +53,7 @@
             if ($image) :
                 $image_url = is_array($image) ? $image['url'] : $image;
             ?>
-                <img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title(); ?>">
+                <img class="about-section__image" src="<?php echo esc_url($image_url); ?>" alt="<?php the_title(); ?>">
             <?php endif; ?>
         </div>
     </div>
