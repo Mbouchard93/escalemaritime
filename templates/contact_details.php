@@ -108,10 +108,10 @@
             <!-- Additional text section-->
             <div class="contact-section__text-wrapper">
                 <p class="contact-section__text">
-                    <?php the_field('contact_details_text_1'); ?>
+                    <?php the_field('contact_text_1'); ?>
                 </p>
                 <p class="contact-section__text bold">
-                    <?php the_field('contact_details_text_2'); ?>
+                    <?php the_field('contact_text_2'); ?>
                 </p>
             </div>
         </div>
