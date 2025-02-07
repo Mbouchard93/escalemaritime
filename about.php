@@ -8,7 +8,10 @@ Template Name: À propos
 
 <main>
 
-<?php get_template_part('/templates/banner') ?>
+    <?php 
+        get_template_part('/templates/banner') 
+    ?>
+    
 </main>
 
 <?php get_footer(); ?>

@@ -10,7 +10,7 @@
             </p>
         </div>
         <div class="looking-future__image-container">
-        <?php
+            <?php
             $image = get_field('looking_future_img_1');
             if ($image) :
                 $image_url = is_array($image) ? $image['url'] : $image;
@@ -26,7 +26,7 @@
             </p>
         </div>
         <div class="looking-future__image-container">
-        <?php
+            <?php
             $image = get_field('looking_future_img_2');
             if ($image) :
                 $image_url = is_array($image) ? $image['url'] : $image;
