@@ -1,8 +1,11 @@
 
 .looking-future {
     position: relative;
-    padding: 5%;
+    padding: 3.5%;
     background-color: $blue-light-secondary;
+    width: 100%;
+    height: auto;
+    max-width: 1600px;
     
     .looking-future__bg-top {
         position: absolute;
@@ -25,13 +28,20 @@
     }
 
     .looking-future__text {
-        padding: 0 0 2rem 0;
+        padding-bottom: 1.5rem;
     }
 
     .looking-future__image-container {
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 100%;
+        height: auto;
+    }
+
+    .looking-future__image {
+        min-width: 100%;
+        min-height: 100%;
     }
 
     @include media-query('desktop') {
@@ -53,12 +63,16 @@
             height: auto;
         }
 
+        .looking-future__text {
+            padding-bottom: 0;
+        }
+
         .padding-left {
-            padding-left: 2rem;
+            padding-left: 1.5rem;
         }
 
         .padding-right {
-            padding-right: 2rem;
+            padding-right: 1.5rem;
         }
 
         .row-reverse {
@@ -83,6 +97,10 @@
         .looking-future__image-container, .looking-future__content {
             width: 50%;
             height: auto;
+        }
+
+        .looking-future__text {
+            padding-bottom: 0;
         }
 
         .padding-left {
