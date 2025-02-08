@@ -1,5 +1,5 @@
 .footer-team {
-    background-color: $bg-third;
+    background-color: #AACBEE;
 }
 
 footer {
@@ -12,6 +12,7 @@ footer {
     color: $white;
     max-width: 1600px;
     background-image: url(../../images/bg-footer-mobile.svg);
+    background-color: $bg-primary;
     @include media-query('tablet'){
         background-image: url(../../images/bg_footer-desktop.svg);
         height: 740px;
