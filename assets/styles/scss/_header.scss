@@ -1,11 +1,17 @@
 header {
   margin-top: 0 !important;
   width: 100%;
+  max-width: 1600px;
   color: $color-primary;
+  background-color: $bg-primary;
+
 
   .header-wrapper {
     display: flex;
     flex-direction: column;
+    position: relative;
+    z-index: 2;
+
     :first-of-type,
     h1 {
       place-self: center;
