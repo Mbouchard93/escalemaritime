@@ -11,23 +11,27 @@
                 </a>
             </div>
             <nav>
-                <?php
-                wp_nav_menu( array(
-                    'menu' => 'Header',
-                    'menu_class' => 'footer-navigation',
-                    'container' => false,
-                    'theme_location' => 'primary',
-                ));
-                ?>
+                <ul class="footer-navigation">
+                    <?php
+                    $menu_items = wp_get_nav_menu_items('Header');
+                    if ($menu_items) {
+                        foreach ($menu_items as $item) {
+                            if ($item->title === 'Contact') {
+                                echo '<li><a href="' . esc_url($item->url) . '"> contactez-nous</a></li>';
+                            }
+                        }
+                    }
+                    ?>
+                </ul>
             </nav>
             <div class="newsletter">
-                <div class = "newsletter-text">
-                <p>Restez informé !</p>
-                <p>Inscrivez-vous à notre infolettre pour recevoir les dernières nouvelles.</p>
+                <div class="newsletter-text">
+                    <p>Restez informé !</p>
+                    <p>Inscrivez-vous à notre infolettre pour recevoir les dernières nouvelles.</p>
                 </div>
-                <div class = "newsletter-form">
-                <input type="text">
-                <button>soumettre</button>
+                <div class="newsletter-form">
+                    <input type="text">
+                    <button>Soumettre</button>
                 </div>
             </div>
         </div>

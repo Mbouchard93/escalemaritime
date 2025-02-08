@@ -17,3 +17,6 @@ Call Stack:
 01/26/25 8:53:54: main.scss - Undefined mixin breakpoint: modules/_events.scss on line 5, at column 3
 Call Stack:
 #0 import modules/_events.scss main.scss on line 6
+02/08/25 4:34:48: main.scss - unexpected }: failed at `` C:\xampp\htdocs\escalemaritime\wp-content\themes\escalemaritime\assets\styles\scss/_footer.scss on line 82, at column 2
+02/08/25 4:34:55: main.scss - unexpected }: failed at `` C:\xampp\htdocs\escalemaritime\wp-content\themes\escalemaritime\assets\styles\scss/_footer.scss on line 82, at column 2
+02/08/25 4:35:01: main.scss - unexpected }: failed at `` C:\xampp\htdocs\escalemaritime\wp-content\themes\escalemaritime\assets\styles\scss/_footer.scss on line 82, at column 2
