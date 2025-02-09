@@ -111,7 +111,10 @@ $events_limit = isset($events_limit) ? $events_limit : -1;
             </div>
             <div class="event__infos">
                 <p class="event_address"><?php the_field('event_adress', $event_id); ?></p>
-                <p class="event_cost"><?php the_field('event_cost', $event_id); ?></p>
+                <div class="event_end-info">
+                    <p class="event_cost"><?php the_field('event_cost', $event_id); ?></p>
+                    <p data-dialog="#event-modal-<?php echo $event_id_sanitized; ?>" class="event_en-savoir-plus">En savoir plus</p>
+                </div>
             </div>
         </div>
 
@@ -206,7 +209,10 @@ $events_limit = isset($events_limit) ? $events_limit : -1;
             </div>
             <div class="event__infos">
                 <p class="event_address"><?php the_field('event_adress', $event_id); ?></p>
-                <p class="event_cost"><?php the_field('event_cost', $event_id); ?></p>
+                <div class="event_end-info">
+                    <p class="event_cost"><?php the_field('event_cost', $event_id); ?></p>
+                    <p data-dialog="#event-modal-<?php echo $event_id_sanitized; ?>" class="event_en-savoir-plus">En savoir plus</p>
+                </div>
             </div>
         </div>
 
