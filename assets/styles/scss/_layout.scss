@@ -21,11 +21,7 @@ main {
   background-color: $bg-primary;
 
   @include media-query("tablet") {
-    padding: $p-tablet;
-  }
-
-  @include media-query("desktop") {
-    padding: $p-desktop;
+    padding: 0;
   }
 }
 

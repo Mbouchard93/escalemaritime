@@ -1,146 +1,150 @@
 .about-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  max-width: 1600px;
+
+  .about-title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../../../assets/images/bg_about_escale.svg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    width: 100%;
+    height: 150px;
+  }
+
+  .about-icon {
+    width: 50px;
+    height: auto;
+  }
+
+  .content-block {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    color: $white;
+
+    h3 {
+      color: $white;
+    }
+  }
+
+  .content-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+    background-color: $blue-navy-primary;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .content-image {
+    overflow: hidden;
     height: auto;
-    max-width: 1600px;
+  }
 
-    .about-title-container{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-image: url("../../../assets/images/bg_about_escale.svg");
-        background-size: 100% auto;
-        background-repeat: no-repeat;
-        background-position: bottom center;
-        width: 100%;
-        height: 150px;
+  .content-text,
+  .content-image {
+    width: 100%;
+    height: 280px;
+  }
+
+  .about-section__image {
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+  .content-button {
+    background-color: transparent;
+    border: 2px solid #7dcfb6;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 1rem;
+  }
+
+  .white {
+    color: $white;
+  }
+
+  @include media-query("mobile") {
+    .about-title-container {
+      height: 200px;
     }
 
-    .about-icon {
-        width: 50px;
-        height: auto;
-    }
-
-    .content-block {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: $white;
-
-        h3 {
-            color: $white;
-        }
-    }
-
-    .content-text {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        gap: 1rem;
-        background-color: $blue-navy-primary;
-        text-align: center;
-        padding: 15px;
-    }
-
+    .content-text,
     .content-image {
-        overflow: hidden;
-        height: auto;
+      height: 360px;
+    }
+  }
+
+  @include media-query("tablet") {
+    .content-block {
+      flex-direction: row-reverse;
     }
 
-    .content-text, .content-image {
-        width: 100%;
-        height: 280px;
+    .content-block-education {
+      flex-direction: row;
+      width: 100%;
     }
 
-    .about-section__image {
-        min-width: 100%;
-        min-height: 100%;
+    .about-title-container {
+      height: 250px;
     }
 
-    .content-button {
-        background-color: transparent;
-        border: 2px solid #7DCFB6;
-        border-radius: 8px;
-        cursor: pointer;
-        padding: 1rem;
+    .content-text,
+    .content-image {
+      width: 50%;
+      height: 250px;
+    }
+  }
+
+  @include media-query("desktop") {
+    .content-block {
+      flex-direction: row-reverse;
     }
 
-    .white {
-        color: $white
+    .content-block-education {
+      flex-direction: row;
     }
 
-    @include media-query('mobile') {
-        .about-title-container{
-            height: 200px;
-        }
-
-        .content-text, .content-image {
-            height: 360px;
-        }
+    .about-title-container {
+      height: 300px;
     }
 
-    @include media-query('tablet') {
-        .content-block {
-            flex-direction: row-reverse;
-        }
+    .content-text,
+    .content-image {
+      width: 50%;
+      height: 350px;
+    }
+  }
 
-        .content-block-education {
-            flex-direction: row;
-        }
-
-        .about-title-container {
-            height: 250px;
-        }
-
-        .content-text, .content-image {
-            width: 50%;
-            height: 250px;
-        }
+  @include media-query("desktop-xl") {
+    .content-block {
+      flex-direction: row-reverse;
     }
 
-    @include media-query('desktop') {
-        .content-block {
-            flex-direction: row-reverse;
-        }
-
-        .content-block-education {
-            flex-direction: row;
-        }
-
-        .about-title-container{
-            height: 300px;
-        }
-
-        .content-text, .content-image {
-            width: 50%;
-            height: 350px;
-        }
+    .content-block-education {
+      flex-direction: row;
     }
 
-    @include media-query('desktop-xl') {
-        .content-block {
-            flex-direction: row-reverse;
-        }
-
-        .content-block-education {
-            flex-direction: row;
-        }
-
-        .about-title-container{
-            height: 350px;
-        }
-
-        .content-text, .content-image {
-            width: 50%;
-            height: 400px;
-        }
+    .about-title-container {
+      height: 350px;
     }
+
+    .content-text,
+    .content-image {
+      width: 50%;
+      height: 400px;
+    }
+  }
 }
-
-

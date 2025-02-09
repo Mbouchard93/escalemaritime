@@ -5,7 +5,6 @@ header {
   color: $color-primary;
   background-color: $bg-primary;
 
-
   .header-wrapper {
     display: flex;
     flex-direction: column;
@@ -102,21 +101,30 @@ header {
           }
 
           .sub-menu {
+            z-index: 100;
             visibility: hidden;
             opacity: 0;
             transition: opacity 0.3s ease, visibility 0.3s ease;
             position: absolute;
             top: 100%;
+            left: 0;
             width: 200px;
+            height: auto;
+            background-color: $bg-primary;
+            padding: 0.5rem 0;
+            border-radius: 5px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 
             li {
               width: 100%;
+              height: auto;
 
               a {
                 text-decoration: none;
                 transition: all 0.3s;
                 display: block;
-                padding: 0.5rem;
+                padding: 0.75rem 1rem;
+                white-space: nowrap;
 
                 &:hover {
                   text-decoration: underline;

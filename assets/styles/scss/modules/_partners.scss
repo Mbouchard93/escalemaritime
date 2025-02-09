@@ -1,25 +1,27 @@
 .partners {
-    ul {
-        li {
-            display: flex;
-            width: 100%;
-            height: 328px;
-            flex-shrink: 0;
-            justify-content: center;
-            align-items: center;
-            gap: 1rem;
-            flex-direction: column;
-            @include media-query("desktop") {
-                flex-direction: row;
-            }
+  padding: 0 2rem;
+  ul {
+    li {
+      display: flex;
+      width: 100%;
+      height: 328px;
+      flex-shrink: 0;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      flex-direction: column;
+      @include media-query("desktop") {
+        flex-direction: row;
+      }
 
-            &:nth-child(2), &:nth-child(4) {
-                img {
-                    @include media-query("desktop") {
-                        order: 2;
-                    }
-                }
-            }
+      &:nth-child(2),
+      &:nth-child(4) {
+        img {
+          @include media-query("desktop") {
+            order: 2;
+          }
         }
+      }
     }
+  }
 }
