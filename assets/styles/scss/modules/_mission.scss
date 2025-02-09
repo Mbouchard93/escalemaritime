@@ -1,75 +1,78 @@
 .mission-section {
-    background-color: $white;
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  max-width: 1600px;
+
+  .mission-text {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-evenly;
+    padding: 1rem;
+  }
+
+  .mission-image-wrapper,
+  .mission-text {
     width: 100%;
-    height: auto;
-    max-width: 1600px;
+    height: 400px;
+  }
+
+  .mission-image-wrapper {
+    overflow: hidden;
+  }
+
+  .mission-img {
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+  @include media-query("mobile") {
+    .mission-image-wrapper,
+    .mission-text {
+      height: 400px;
+    }
+  }
+
+  @include media-query("tablet") {
+    .mission-image-wrapper,
+    .mission-text {
+      height: 400px;
+    }
+  }
+
+  @include media-query("desktop") {
+    flex-direction: row-reverse;
+    width: 100%;
+    height: 400px;
+
+    .mission-image-wrapper,
+    .mission-text {
+      width: 50%;
+      height: 400px;
+    }
 
     .mission-text {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        padding: 4%;
+      padding: 2rem;
+    }
+  }
+
+  @include media-query("desktop-xl") {
+    flex-direction: row-reverse;
+    width: 100%;
+    height: 500px;
+
+    .mission-image-wrapper,
+    .mission-text {
+      width: 50%;
+      height: 500px;
     }
 
-    .mission-image-wrapper, .mission-text {
-        width: 100%;
-        height: 400px;
+    .mission-text {
+      padding: 2rem;
     }
-
-    .mission-image-wrapper {
-        overflow: hidden;
-    }
-
-    .mission-img {
-        min-width: 100%;
-        min-height: 100%;
-    }
-
-    @include media-query('mobile') {
-        .mission-image-wrapper, .mission-text {
-            height: 400px;
-        }
-    }
-
-    @include media-query('tablet') {
-        .mission-image-wrapper, .mission-text {
-            height: 400px;
-        }
-    } 
-
-    @include media-query('desktop') {
-        flex-direction: row-reverse;
-        width: 100%;
-        height: 400px;
-    
-        .mission-image-wrapper, .mission-text {
-            width: 50%;
-            height: 400px;
-        }
-        
-        .mission-text {
-            padding: 1rem;
-        }
-    }
-
-    @include media-query('desktop-xl') {
-        flex-direction: row-reverse;
-        width: 100%;
-        height: 500px;
-    
-        .mission-image-wrapper, .mission-text {
-            width: 50%;
-            height: 500px;
-        }
-        
-        .mission-text {
-            padding: 1rem;
-        }
-    }
-
+  }
 }
-
