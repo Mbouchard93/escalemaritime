@@ -1,15 +1,6 @@
 <section class="about-section">
     <!-- section du titre et image du fond -->
     <div class="about-title-container">
-        <div>
-            <?php
-            $image = get_field('title_icon');
-            if ($image) :
-                $image_url = is_array($image) ? $image['url'] : $image;
-            ?>
-                <img class="about-icon" src="<?php echo esc_url($image_url); ?>" alt="<?php the_title(); ?>">
-            <?php endif; ?>
-        </div>
         <h2>
             <?php the_field('about_title'); ?>
         </h2>

@@ -66,45 +66,47 @@
                 </p>
             </div>
             <!-- Opening hours section -->
-            <div class="contact-hours">
-                <h4  class="contact-hours__title">
-                    <?php the_field('contact_opening_hours_title'); ?>
-                </h4>
-                <div class="contact-hours__grid">
-                    <div class="contact-hours__days">
-                        <p>Lundi</p>
-                        <p>Mardi</p>
-                        <p>Mercredi</p>
-                        <p>Jeudi</p>
-                        <p>Vendredi</p>
-                        <p>Samedi</p>
-                        <p>Dimanche</p>
+            <?php 
+                $monday_hours = get_field('monday_hours');
+                $tuesday_hours = get_field('tuesday_hours');
+                $wednesday_hours = get_field('wednesday_hours');
+                $thursday_hours = get_field('thursday_hours');
+                $friday_hours = get_field('friday_hours');
+                $saturday_hours = get_field('saturday_hours');
+                $sunday_hours = get_field('sunday_hours');
+
+                if ($monday_hours || $tuesday_hours || $wednesday_hours || $thursday_hours || $friday_hours || $saturday_hours || $sunday_hours) : 
+                ?>
+                    <div class="contact-hours">
+                        <h4 class="contact-hours__title">
+                            <?php the_field('contact_opening_hours_title'); ?>
+                        </h4>
+                        <div class="contact-hours__grid">
+                            <div class="contact-hours__days">
+                                <p>Lundi</p>
+                                <p>Mardi</p>
+                                <p>Mercredi</p>
+                                <p>Jeudi</p>
+                                <p>Vendredi</p>
+                                <p>Samedi</p>
+                                <p>Dimanche</p>
+                            </div>
+                            <div class="contact-hours__times">
+                                <p><?php echo esc_html($monday_hours); ?></p>
+                                <p><?php echo esc_html($tuesday_hours); ?></p>
+                                <p><?php echo esc_html($wednesday_hours); ?></p>
+                                <p><?php echo esc_html($thursday_hours); ?></p>
+                                <p><?php echo esc_html($friday_hours); ?></p>
+                                <p><?php echo esc_html($saturday_hours); ?></p>
+                                <p><?php echo esc_html($sunday_hours); ?></p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="contact-hours__times">
-                        <p>
-                            <?php the_field('monday_hours'); ?>
-                        </p>
-                        <p>
-                            <?php the_field('tuesday_hours'); ?>
-                        </p>
-                        <p>
-                            <?php the_field('wednesday_hours'); ?>
-                        </p>
-                        <p>
-                            <?php the_field('thursday_hours'); ?>
-                        </p>
-                        <p>
-                            <?php the_field('friday_hours'); ?>
-                        </p>
-                        <p>
-                            <?php the_field('saturday_hours'); ?>
-                        </p>
-                        <p>
-                            <?php the_field('sunday_hours'); ?>
-                        </p>
-                    </div>
-                </div>
-            </div>
+                <?php else : ?>
+                    <p class="contact-hours__message">Horaires à venir</p>
+                <?php endif; ?>
+
+
             <!-- Additional text section-->
             <div class="contact-section__text-wrapper">
                 <p class="contact-section__text">

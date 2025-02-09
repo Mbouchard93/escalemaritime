@@ -27,6 +27,11 @@
 .event {
   background-color: #ddeaf8;
   box-shadow: $box-shadow;
+  transition: all 0.3s;
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+      rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  }
 
   &__title {
     display: flex;
@@ -69,8 +74,20 @@
       color: $charcoal;
     }
 
+    .event_end-info {
+      display: flex;
+      justify-content: space-between;
+    }
+
     .event_cost {
       font-weight: 800;
+    }
+
+    .event_en-savoir-plus {
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
     }
   }
 
