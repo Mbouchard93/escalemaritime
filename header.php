@@ -43,8 +43,12 @@
         </nav>
 
         <div class="header-wrapper">
-            <?php if (is_front_page()) : ?>
+            <?php
+            $parent_id = wp_get_post_parent_id(get_the_ID());
+            if (is_front_page()) : ?>
                 <img src="<?php bloginfo('template_url'); ?>/assets/images/logo-header.svg" alt="Logo: Escale maritime">
+            <?php elseif ($parent_id) : ?>
+                <h1 class="page-title"><?php echo get_the_title($parent_id); ?></h1>
             <?php else : ?>
                 <h1 class="page-title"><?php echo get_the_title(); ?></h1>
             <?php endif; ?>
