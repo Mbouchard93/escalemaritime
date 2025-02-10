@@ -19,7 +19,7 @@
             </div>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/menu-burger.svg" class="btn-menu" data-dialog="#menu-mobile" />
             <?php
-                wp_nav_menu( array(
+                wp_nav_menu(array(
                     'menu' => 'Header',
                     'menu_class' => 'desktop-navigation',
                     'container' => false,
@@ -29,7 +29,7 @@
             <aside id="menu-mobile" class="dialog">
                 <div class="mobile-navigation">
                     <?php
-                        wp_nav_menu( array(
+                        wp_nav_menu(array(
                             'menu' => 'Header',
                             'container' => false,
                             'theme_location' => 'primary',
@@ -45,12 +45,18 @@
         <div class="header-wrapper">
             <?php
             $parent_id = wp_get_post_parent_id(get_the_ID());
+
             if (is_front_page()) : ?>
                 <img src="<?php bloginfo('template_url'); ?>/assets/images/logo-header.svg" alt="Logo: Escale maritime">
+            
+            <?php elseif (is_404()) : ?>
+                <h1 class="error-title">404</h1>
+
             <?php elseif ($parent_id) : ?>
-                <h1 class="page-title"><?php echo get_the_title($parent_id); ?></h1>
+                <h1><?php echo get_the_title($parent_id); ?></h1>
+
             <?php else : ?>
-                <h1 class="page-title"><?php echo get_the_title(); ?></h1>
+                <h1 ><?php echo get_the_title(); ?></h1>
             <?php endif; ?>
 
             <?php if (
@@ -61,7 +67,7 @@
             ) : ?>
                 <nav class="secondary-navigation">
                     <?php
-                        wp_nav_menu( array(
+                        wp_nav_menu(array(
                             'menu' => 'À propos',
                             'menu_class' => 'sub-navigation',
                             'container' => false,
@@ -77,4 +83,3 @@
             </div>
         </div>
     </header>
-
