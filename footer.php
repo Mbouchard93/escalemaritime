@@ -26,13 +26,9 @@
             </nav>
             <div class="newsletter">
                 <div class="newsletter-text">
-                    <p>Restez informé !</p>
                     <p>Inscrivez-vous à notre infolettre pour recevoir les dernières nouvelles.</p>
                 </div>
-                <div class="newsletter-form">
-                    <input type="text">
-                    <button>Soumettre</button>
-                </div>
+                    <a href="">je m'inscrit</a>
             </div>
         </div>
         <p>© <?php echo date("Y"); ?> L’Escale maritime de Trois-Pistoles - Tous droits réservés</p>
