@@ -1,41 +1,43 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const btnPrevious = document.querySelector(".prev");
-    const btnNext = document.querySelector(".next");
+    const slider = document.querySelector(".slider_slides");
     const slides = document.querySelectorAll(".slider_slide");
-    const slidesContainer = document.querySelector(".slider_slides");
-    let currentSlideIndex = 0;
+    const btnPrev = document.querySelector(".control--previous");
+    const btnNext = document.querySelector(".control--next");
 
-    function getVisibleSlidesCount() {
-        const containerWidth = slidesContainer.offsetWidth;
-        const slideWidth = slides[0].offsetWidth;
-        return Math.floor(containerWidth / slideWidth);
+    let isAnimating = false;
+    let currentIndex = getRandomIndex();
+
+    function getRandomIndex() {
+        return Math.floor(Math.random() * slides.length);
     }
 
-    function updateSlidePosition() {
-        const slideWidth = slides[0].offsetWidth;
-        slidesContainer.scrollTo({
-            left: slideWidth * currentSlideIndex,
-            behavior: "smooth",
+    function updateSlideClasses() {
+        slides.forEach((slide, index) => {
+            slide.classList.toggle("active", index === currentIndex);
         });
     }
 
-    function changeSlide(direction) {
-        const totalSlides = slides.length;
-        const visibleSlidesCount = getVisibleSlidesCount();
-        const maxSlideIndex = totalSlides - visibleSlidesCount;
+    function moveSlider(newIndex) {
+        if (isAnimating) return;
+        isAnimating = true;
 
-        currentSlideIndex = (currentSlideIndex + direction + totalSlides) % totalSlides;
+        currentIndex = (newIndex + slides.length) % slides.length;
+        const activeSlide = slides[currentIndex];
 
-        if (currentSlideIndex > maxSlideIndex) {
-            currentSlideIndex = 0;
-        }
+        slider.style.scrollBehavior = "smooth";
+        slider.scrollTo({
+            left: activeSlide.offsetLeft - (slider.clientWidth - activeSlide.clientWidth) / 2,
+        });
 
-        updateSlidePosition();
+        updateSlideClasses();
+
+        setTimeout(() => {
+            isAnimating = false;
+        }, 500);
     }
 
-    btnPrevious.addEventListener("click", () => changeSlide(-1));
-    btnNext.addEventListener("click", () => changeSlide(1));
-    window.addEventListener("resize", updateSlidePosition);
+    moveSlider(currentIndex);
 
-    updateSlidePosition();
+    btnPrev.addEventListener("click", () => moveSlider(currentIndex - 1));
+    btnNext.addEventListener("click", () => moveSlider(currentIndex + 1));
 });
