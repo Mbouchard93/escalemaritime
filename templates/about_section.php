@@ -1,11 +1,11 @@
-<section class="about-section">
+<section class="about-section" aria-labelledby="about-section-title">
     <!-- section du titre et image du fond -->
     <div class="about-title-container">
         <h2>
             <?php the_field('about_title'); ?>
         </h2>
     </div>
-    <div class="content-block">
+    <div class="content-block" role="region" aria-labelledby="title-1">
         <div class="content-text">
             <h3>
                 <?php the_field('title_1'); ?>
@@ -24,7 +24,7 @@
             <?php endif; ?>
         </div>
     </div>
-    <div class="content-block content-block-education">
+    <div class="content-block content-block-education" role="region" aria-labelledby="title-2">
         <div class="content-text">
             <h3>
                 <?php the_field('title_2'); ?>
@@ -33,7 +33,7 @@
                 <?php the_field('text_2'); ?>
             </p>
             <button class="content-button white">
-                <a href="<?php echo get_field('about_btn_more')['link_btn']; ?>">
+                <a href="<?php echo get_field('about_btn_more')['link_btn']; ?>" aria-label="<?php echo esc_attr($label); ?>">
                     <?php echo get_field('about_btn_more')['label_btn']; ?>
                 </a>
             </button>
