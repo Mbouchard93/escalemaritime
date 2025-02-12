@@ -31,6 +31,8 @@ body {
   font-size: 16px;
   line-height: 1.5;
   background-color: $bg-third;
+  overflow-x: hidden;
+  width: 100dvw;
 }
 
 h1,
