@@ -1,6 +1,8 @@
-<section class="partners">
-    <h2><?php the_field('partner_title'); ?></h2>
-    <ul>
+<section class="partners" aria-labelledby="partners-heading">
+    <h2>
+        <?php the_field('partner_title'); ?>
+    </h2>
+    <ul role="list">
         <?php
             $i = 1;
             while ($i <= 4) {
@@ -16,7 +18,12 @@
                     $image_alt = !empty($titre_partenaire) ? $titre_partenaire : get_acf_image_alt($image_id, 'Logo du partenaire');
                 ?>
                 <li>
-                    <img src="<?php echo esc_url($imageUrl); ?>" alt="<?php echo esc_attr($image_alt); ?>">
+                    <img 
+                        src="<?php echo esc_url($imageUrl); ?>" 
+                        alt="<?php echo esc_attr($image_alt); ?>"
+                        loading="lazy"
+                        decoding="async"
+                    >
                     <p><?php echo esc_html($text); ?></p>
                 </li>
                 <?php

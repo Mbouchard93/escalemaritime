@@ -22,7 +22,11 @@
                 $image_url = is_array($image) ? $image['url'] : $image;
                 $image_alt = get_acf_image_alt($image_id, 'about_img_1');
             ?>
-                <img class="about-section__image" src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($image_alt); ?>">
+                <img 
+                    class="about-section__image" 
+                    src="<?php echo esc_url($image_url); ?>" 
+                    alt="<?php echo esc_attr($image_alt); ?>"
+                >
             <?php endif; ?>
         </div>
     </div>
@@ -48,7 +52,11 @@
                 $image_url = is_array($image) ? $image['url'] : $image;
                 $image_alt = get_acf_image_alt($image_id, 'about_img_2');
             ?>
-                <img class="about-section__image" src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($image_alt); ?>">
+                <img 
+                    class="about-section__image" 
+                    src="<?php echo esc_url($image_url); ?>" 
+                    alt="<?php echo esc_attr($image_alt); ?>"
+                >
             <?php endif; ?>
         </div>
     </div>
