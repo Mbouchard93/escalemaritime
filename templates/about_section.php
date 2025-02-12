@@ -18,9 +18,11 @@
             <?php
             $image = get_field('about_img_1');
             if ($image) :
+                $image_id = is_array($image) ? $image['ID'] : $image;
                 $image_url = is_array($image) ? $image['url'] : $image;
+                $image_alt = get_acf_image_alt($image_id, 'about_img_1');
             ?>
-                <img class="about-section__image" src="<?php echo esc_url($image_url); ?>" alt="<?php the_title(); ?>">
+                <img class="about-section__image" src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($image_alt); ?>">
             <?php endif; ?>
         </div>
     </div>
@@ -33,8 +35,8 @@
                 <?php the_field('text_2'); ?>
             </p>
             <button class="content-button white">
-                <a href="<?php echo get_field('about_btn_more')['link_btn']; ?>">
-                    <?php echo get_field('about_btn_more')['label_btn']; ?>
+                <a href="<?php echo esc_url(get_field('about_btn_more')['link_btn']); ?>">
+                    <?php echo esc_html(get_field('about_btn_more')['label_btn']); ?>
                 </a>
             </button>
         </div>
@@ -42,9 +44,11 @@
             <?php
             $image = get_field('about_img_2');
             if ($image) :
+                $image_id = is_array($image) ? $image['ID'] : $image;
                 $image_url = is_array($image) ? $image['url'] : $image;
+                $image_alt = get_acf_image_alt($image_id, 'about_img_2');
             ?>
-                <img class="about-section__image" src="<?php echo esc_url($image_url); ?>" alt="<?php the_title(); ?>">
+                <img class="about-section__image" src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($image_alt); ?>">
             <?php endif; ?>
         </div>
     </div>

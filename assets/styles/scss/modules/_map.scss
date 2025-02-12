@@ -41,3 +41,14 @@
     color: $white;
   }
 }
+
+.map__modal {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+
+  &-img {
+    width: 100px;
+  }
+}

@@ -44,6 +44,22 @@ function create_posttype() {
     );
 }
 
+// ! ALT DES IMAGES //
+
+function get_acf_image_alt($image_id, $acf_field = '') {
+    if (!$image_id) {
+        return '';
+    }
+
+    $alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
+
+    if (empty($alt) && $acf_field) {
+        $alt = get_field_object($acf_field)['label'] ?? ''; 
+    }
+
+    return esc_attr($alt);
+}
+
 function remove_wysiwyg() {
     remove_post_type_support('page', 'editor');
 }

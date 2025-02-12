@@ -9,9 +9,11 @@
                     <?php 
                     $image = get_field('value_icon_1'); 
                     if ($image) :
+                        $image_id = is_array($image) ? $image['ID'] : $image;
                         $image_url = is_array($image) ? $image['url'] : $image;
+                        $image_alt = get_acf_image_alt($image_id, 'value_icon_1');
                     ?>
-                        <img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title(); ?>">
+                        <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($image_alt); ?>">
                     <?php endif; ?>
                 </div>
                 <h3><?php the_field('value_title_1'); ?></h3>
@@ -24,9 +26,11 @@
                     <?php 
                     $image = get_field('value_icon_2'); 
                     if ($image) :
+                        $image_id = is_array($image) ? $image['ID'] : $image;
                         $image_url = is_array($image) ? $image['url'] : $image;
+                        $image_alt = get_acf_image_alt($image_id, 'value_icon_2');
                     ?>
-                        <img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title(); ?>">
+                        <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($image_alt); ?>">
                     <?php endif; ?>
                 </div>
                 <h3><?php the_field('value_title_2'); ?></h3>
@@ -39,9 +43,11 @@
                     <?php 
                     $image = get_field('value_icon_3'); 
                     if ($image) :
+                        $image_id = is_array($image) ? $image['ID'] : $image;
                         $image_url = is_array($image) ? $image['url'] : $image;
+                        $image_alt = get_acf_image_alt($image_id, 'value_icon_3');
                     ?>
-                        <img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title(); ?>">
+                        <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($image_alt); ?>">
                     <?php endif; ?>
                 </div>
                 <h3><?php the_field('value_title_3'); ?></h3>
