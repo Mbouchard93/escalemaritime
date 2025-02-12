@@ -10,33 +10,35 @@
     <?php wp_head(); ?>
 </head>
 <body>
-    <header>
-        <nav>
+    <header role="banner">
+        <nav aria-label="Navigation principale">
             <div class="logo">
-                <a href="<?php echo site_url(); ?>">
+                <a href="<?php echo site_url(); ?>" aria-label="Retour à l'accueil">
                     <img src="<?php bloginfo('template_url'); ?>/assets/images/logo-header.svg" alt="Logo: Escale maritime">
                 </a>
-            </div>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/menu-burger.svg" class="btn-menu" data-dialog="#menu-mobile" />
+            </div aria-expanded="false" aria-controls="menu-mobile" aria-label="Menu principal">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/menu-burger.svg" class="btn-menu" data-dialog="#menu-mobile" role="presentation" />
             <?php
                 wp_nav_menu(array(
                     'menu' => 'Header',
                     'menu_class' => 'desktop-navigation',
                     'container' => false,
                     'theme_location' => 'primary',
+                    'aria-label' => 'Menu desktop',
                 ));
             ?>
-            <aside id="menu-mobile" class="dialog">
+            <aside id="menu-mobile" class="dialog" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Menu mobile">
                 <div class="mobile-navigation">
                     <?php
                         wp_nav_menu(array(
                             'menu' => 'Header',
                             'container' => false,
                             'theme_location' => 'primary',
+                            'aria-label' => 'Menu mobile',
                         ));
                     ?>
-                    <div class="btn-close">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/btn-close.svg" />
+                    <div class="btn-close" aria-label="Fermer le menu">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/btn-close.svg" role="presentation" />
                     </div>
                 </div>
             </aside>
@@ -65,7 +67,7 @@
                 is_page_template('our-team.php') || 
                 is_page_template('about.php')
             ) : ?>
-                <nav class="secondary-navigation">
+                <nav class="secondary-navigation" aria-label="Navigation secondaire">
                     <?php
                         wp_nav_menu(array(
                             'menu' => 'À propos',
@@ -77,9 +79,9 @@
                 </nav>
             <?php endif; ?>
 
-            <div class="header-images">
-                <img src="<?php bloginfo('template_url'); ?>/assets/images/header-1.png" aria-hidden="true" alt="Image d'une montagne bleu">
-                <img src="<?php bloginfo('template_url'); ?>/assets/images/header-2.png" aria-hidden="true" alt="Image d'une montagne bleu">
+            <div class="header-images" aria-hidden="true" role="presentation">
+                <img src="<?php bloginfo('template_url'); ?>/assets/images/header-1.png" aria-hidden="true" alt="Image d'une montagne bleu" role="presentation">
+                <img src="<?php bloginfo('template_url'); ?>/assets/images/header-2.png" aria-hidden="true" alt="Image d'une montagne bleu" role="presentation">
             </div>
         </div>
     </header>
