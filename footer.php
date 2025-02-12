@@ -18,7 +18,7 @@
                     $descnews = !empty($newsletter['text']) ? $newsletter['text'] : '';
 
                     if (!empty($imageUrl)) : ?>
-                        <a href="<?php echo site_url(); ?>">
+                        <a href="<?php echo site_url(); ?>"  aria-label="Retour à l'accueil">
                             <img src="<?php echo esc_url($imageUrl); ?>" alt="Logo: Escale maritime">
                         </a>
                     <?php endif;

@@ -7,7 +7,7 @@
 
         if ($teams->have_posts()) :
     ?>
-        <div class="conseil-membre">
+        <div class="conseil-membre" role="region" aria-labelledby="conseil-heading">
             <h2>Membres du Conseil</h2>
             <div class="layout">
                 <?php while ($teams->have_posts()) : $teams->the_post(); ?>
@@ -20,11 +20,21 @@
                     ?>
                         <div class="team">
                             <figure>
-                                <img src="<?php echo esc_url($team_img); ?>" alt="<?php the_title(); ?>">
+                                <img 
+                                    src="<?php echo esc_url($team_img); ?>" 
+                                    alt="<?php the_title(); ?>"
+                                    loading="lazy"
+                                    decoding="async"
+                                >
                             </figure>
                             <div>
                                 <?php if ($team_link) : ?>
-                                    <a href="<?php echo esc_url($team_link); ?>" target="_blank">
+                                    <a 
+                                        href="<?php echo esc_url($team_link); ?>" 
+                                        target="_blank"
+                                        rel="noopener noreferrer" 
+                                        aria-label="<?php echo esc_attr(sprintf('En savoir plus sur %s', $team_name)); ?>"
+                                    >
                                 <?php endif; ?>
                                         <h3><?php echo esc_html($team_name); ?></h3>
                                         <?php if ($team_job) : ?>
@@ -40,7 +50,7 @@
             </div>
         </div>
 
-        <div class="equipe-travail">
+        <div class="equipe-travail" role="region" aria-labelledby="equipe-heading">
             <h2>Équipe de Travail</h2>
             <div class="layout">
                 <?php 
@@ -55,15 +65,30 @@
                     <?php if (!get_field('teams_section')) : ?>
                         <div class="team">
                             <figure>
-                                <img src="<?php echo esc_url($team_img); ?>" alt="<?php the_title(); ?>">
+                                <img 
+                                    src="<?php echo esc_url($team_img); ?>" 
+                                    alt="<?php the_title(); ?>"
+                                    loading="lazy"
+                                    decoding="async"
+                                >
                             </figure>
                             <div>
                                 <?php if ($team_link) : ?>
-                                    <a href="<?php echo esc_url($team_link); ?>" target="_blank">
+                                    <a 
+                                        href="<?php echo esc_url($team_link); ?>" 
+                                        target="_blank"
+                                        rel="noopener noreferrer" 
+                                        class="team-member__link"
+                                        aria-label="<?php echo esc_attr(sprintf('En savoir plus sur %s', $team_name)); ?>"
+                                    >
                                 <?php endif; ?>
-                                        <h3><?php echo esc_html($team_name); ?></h3>
+                                        <h3>
+                                            <?php echo esc_html($team_name); ?>
+                                        </h3>
                                         <?php if ($team_job) : ?>
-                                            <p><?php echo esc_html($team_job); ?></p>
+                                            <p>
+                                                <?php echo esc_html($team_job); ?>
+                                            </p>
                                         <?php endif; ?>
                                 <?php if ($team_link) : ?>
                                     </a>

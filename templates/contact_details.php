@@ -16,15 +16,22 @@
                             $image_url = is_array($image) ? $image['url'] : $image;
                             $image_alt = get_acf_image_alt($image_id, 'contact_phone_icon');
                         ?>
-                            <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($image_alt); ?>" role="presentation">
+                            <img 
+                                src="<?php echo esc_url($image_url); ?>" 
+                                alt="<?php echo esc_attr($image_alt); ?>" 
+                                role="presentation"
+                            >
                         <?php endif; ?>
                     </div>
                     <p class="contact-item__title">
                         <?php the_field('contact_phone_title'); ?>
                     </p>
                 </div>
-                <p class="contact-item__content" aria-label="Téléphone: <?php echo esc_attr(get_field('contact_phone_number')); ?>">
-                    <?php the_field('contact_phone_number'); ?>
+                <p 
+                    class="contact-item__content" 
+                    aria-label="Téléphone: <?php echo esc_attr(get_field('contact_phone_number')); ?>"
+                >
+                        <?php the_field('contact_phone_number'); ?>
                 </p>
             </div>
             <!-- Email section -->
@@ -38,14 +45,21 @@
                             $image_url = is_array($image) ? $image['url'] : $image;
                             $image_alt = get_acf_image_alt($image_id, 'contact_email_icon');
                         ?>
-                            <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($image_alt); ?>" role="presentation">
+                            <img 
+                                src="<?php echo esc_url($image_url); ?>" 
+                                alt="<?php echo esc_attr($image_alt); ?>" 
+                                role="presentation"
+                            >
                         <?php endif; ?>
                     </div>
                     <p class="contact-item__title">
                         <?php the_field('contact_email_title'); ?>
                     </p>
                 </div>
-                <p class="contact-item__content"  aria-label="Courriel: <?php echo esc_attr(get_field('contact_email_address')); ?>">
+                <p 
+                    class="contact-item__content" 
+                    aria-label="Courriel: <?php echo esc_attr(get_field('contact_email_address')); ?>"
+                >
                     <?php the_field('contact_email_address'); ?>
                 </p>
             </div>
@@ -60,14 +74,21 @@
                             $image_url = is_array($image) ? $image['url'] : $image;
                             $image_alt = get_acf_image_alt($image_id, 'contact_address_icon');
                         ?>
-                            <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($image_alt); ?>" role="presentation">
+                            <img 
+                                src="<?php echo esc_url($image_url); ?>" 
+                                alt="<?php echo esc_attr($image_alt); ?>" 
+                                role="presentation"
+                            >
                         <?php endif; ?>
                     </div>
                     <p class="contact-item__title">
                         <?php the_field('contact_address_title'); ?>
                     </p>
                 </div>
-                <p class="contact-item__content"  aria-label="Adresse: <?php echo esc_attr(get_field('contact_address')); ?>">
+                <p 
+                    class="contact-item__content" 
+                    aria-label="Adresse: <?php echo esc_attr(get_field('contact_address')); ?>"
+                >
                     <?php the_field('contact_address'); ?>
                 </p>
             </div>
@@ -132,7 +153,12 @@
                 $image_url = is_array($image) ? $image['url'] : $image;
                 $image_alt = get_acf_image_alt($image_id, 'image_contact_section');
             ?>
-                <img class="image_contact" src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($image_alt); ?>" role="presentation">
+                <img 
+                    class="image_contact" 
+                    src="<?php echo esc_url($image_url); ?>" 
+                    alt="<?php echo esc_attr($image_alt); ?>" 
+                    <?php echo empty($image_alt) ? 'role="presentation"' : ''; ?>
+                >
                 <?php endif; ?>
         </div>
     </div>

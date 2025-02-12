@@ -22,7 +22,7 @@
                     if ($info->have_posts()) :
                         $info->the_post();
                         $image = get_field('header_logo');
-                      $imageUrl = $image['url'];
+                        $imageUrl = $image['url'];
                     ?>
                             <img src="<?php echo $imageUrl; ?>" alt="Logo: Escale maritime">
                     <?php endif; wp_reset_postdata();  ?>
@@ -87,6 +87,7 @@
                             'menu_class' => 'sub-navigation',
                             'container' => false,
                             'theme_location' => 'primary',
+                            'aria-label' => 'Menu à propos',
                         ));
                     ?>
                 </nav>
