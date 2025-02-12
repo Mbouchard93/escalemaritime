@@ -1,4 +1,4 @@
-<section class="contact-section">
+<section class="contact-section" aria-labelledby="contact-heading">
     <h2>
         <?php the_field('contact_details_title'); ?>
     </h2>
@@ -6,7 +6,7 @@
     <div class="contact-section__details">
         <div class="contact-section__details-wrapper">
             <!-- Phone section -->
-            <div class="contact-item--phone">
+            <div class="contact-item--phone" role="group" aria-labelledby="phone-title">
                 <div class="contact-item__heading">
                     <div class="contact-item__icon-wrapper">
                         <?php
@@ -14,19 +14,19 @@
                         if ($image) :
                             $image_url = is_array($image) ? $image['url'] : $image;
                         ?>
-                            <img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title(); ?>">
+                            <img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title(); ?>" role="presentation">
                         <?php endif; ?>
                     </div>
                     <p class="contact-item__title">
                         <?php the_field('contact_phone_title'); ?>
                     </p>
                 </div>
-                <p class="contact-item__content">
+                <p class="contact-item__content" aria-label="Téléphone: <?php echo esc_attr(get_field('contact_phone_number')); ?>">
                     <?php the_field('contact_phone_number'); ?>
                 </p>
             </div>
             <!-- Email section -->
-            <div class="contact-item--email">
+            <div class="contact-item--email" role="group" aria-labelledby="email-title">
                 <div class="contact-item__heading">
                     <div class="contact-item__icon-wrapper">
                         <?php
@@ -34,19 +34,19 @@
                         if ($image) :
                             $image_url = is_array($image) ? $image['url'] : $image;
                         ?>
-                            <img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title(); ?>">
+                            <img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title(); ?>"  role="presentation">
                         <?php endif; ?>
                     </div>
                     <p class="contact-item__title">
                         <?php the_field('contact_email_title'); ?>
                     </p>
                 </div>
-                <p class="contact-item__content">
+                <p class="contact-item__content"  aria-label="Courriel: <?php echo esc_attr(get_field('contact_email_address')); ?>">
                     <?php the_field('contact_email_address'); ?>
                 </p>
             </div>
             <!-- Address section -->
-            <div class="contact-item contact-item--address">
+            <div class="contact-item contact-item--address" role="group" aria-labelledby="address-title">
                 <div class="contact-item__heading">
                     <div class="contact-item__icon-wrapper">
                         <?php
@@ -54,14 +54,14 @@
                         if ($image) :
                             $image_url = is_array($image) ? $image['url'] : $image;
                         ?>
-                            <img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title(); ?>">
+                            <img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title(); ?>" role="presentation">
                         <?php endif; ?>
                     </div>
                     <p class="contact-item__title">
                         <?php the_field('contact_address_title'); ?>
                     </p>
                 </div>
-                <p class="contact-item__content">
+                <p class="contact-item__content"  aria-label="Adresse: <?php echo esc_attr(get_field('contact_address')); ?>">
                     <?php the_field('contact_address'); ?>
                 </p>
             </div>
@@ -77,7 +77,7 @@
 
                 if ($monday_hours || $tuesday_hours || $wednesday_hours || $thursday_hours || $friday_hours || $saturday_hours || $sunday_hours) : 
                 ?>
-                    <div class="contact-hours">
+                    <div class="contact-hours"  aria-label="Horaires d'ouverture">
                         <h4 class="contact-hours__title">
                             <?php the_field('contact_opening_hours_title'); ?>
                         </h4>
@@ -103,7 +103,7 @@
                         </div>
                     </div>
                 <?php else : ?>
-                    <p class="contact-hours__message">Horaires à venir</p>
+                    <p class="contact-hours__message" role="alert">Horaires à venir</p>
                 <?php endif; ?>
 
 
@@ -124,7 +124,7 @@
             if ($image) :
                 $image_url = is_array($image) ? $image['url'] : $image;                
             ?>
-                <img class="image_contact" src="<?php echo esc_url($image_url); ?>" alt="<?php the_title(); ?>">
+                <img class="image_contact" src="<?php echo esc_url($image_url); ?>" alt="<?php the_title(); ?>" role="presentation">
                 <?php endif; ?>
         </div>
     </div>
