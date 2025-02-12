@@ -14,6 +14,19 @@
                 if ($bannerPartners->have_posts()) :
                     while ($bannerPartners->have_posts()) : $bannerPartners->the_post();
                         $image = get_field('partner_logo');
+                        if ($image) :
+                            $image_id  = $image['ID'];
+                            $image_url = $image['url'];
+                            $image_alt = get_acf_image_alt($image_id, 'partner_logo');
+                            $url       = get_field('partner_link');
+            ?>
+                <li class="slider_slide">
+                    <a href="<?php echo esc_url($url); ?>" target="_blank">
+                        <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($image_alt); ?>">
+                    </a>
+                </li>
+            <?php 
+                        endif;
                         $imageUrl = $image['url'];
                         $url = get_field('partner_link');
             ?>
@@ -26,6 +39,7 @@
                 </li>
             <?php
                     endwhile;
+                    wp_reset_postdata();
                 endif;
             ?>
         </ul>

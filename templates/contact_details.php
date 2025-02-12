@@ -12,9 +12,11 @@
                         <?php
                         $image = get_field('contact_phone_icon');
                         if ($image) :
+                            $image_id = is_array($image) ? $image['ID'] : $image;
                             $image_url = is_array($image) ? $image['url'] : $image;
+                            $image_alt = get_acf_image_alt($image_id, 'contact_phone_icon');
                         ?>
-                            <img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title(); ?>" role="presentation">
+                            <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($image_alt); ?>" role="presentation">
                         <?php endif; ?>
                     </div>
                     <p class="contact-item__title">
@@ -32,9 +34,11 @@
                         <?php
                         $image = get_field('contact_email_icon');
                         if ($image) :
+                            $image_id = is_array($image) ? $image['ID'] : $image;
                             $image_url = is_array($image) ? $image['url'] : $image;
+                            $image_alt = get_acf_image_alt($image_id, 'contact_email_icon');
                         ?>
-                            <img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title(); ?>"  role="presentation">
+                            <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($image_alt); ?>" role="presentation">
                         <?php endif; ?>
                     </div>
                     <p class="contact-item__title">
@@ -52,9 +56,11 @@
                         <?php
                         $image = get_field('contact_address_icon');
                         if ($image) :
+                            $image_id = is_array($image) ? $image['ID'] : $image;
                             $image_url = is_array($image) ? $image['url'] : $image;
+                            $image_alt = get_acf_image_alt($image_id, 'contact_address_icon');
                         ?>
-                            <img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title(); ?>" role="presentation">
+                            <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($image_alt); ?>" role="presentation">
                         <?php endif; ?>
                     </div>
                     <p class="contact-item__title">
@@ -122,9 +128,11 @@
             <?php
             $image = get_field('image_contact_section');
             if ($image) :
-                $image_url = is_array($image) ? $image['url'] : $image;                
+                $image_id = is_array($image) ? $image['ID'] : $image;
+                $image_url = is_array($image) ? $image['url'] : $image;
+                $image_alt = get_acf_image_alt($image_id, 'image_contact_section');
             ?>
-                <img class="image_contact" src="<?php echo esc_url($image_url); ?>" alt="<?php the_title(); ?>" role="presentation">
+                <img class="image_contact" src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($image_alt); ?>" role="presentation">
                 <?php endif; ?>
         </div>
     </div>

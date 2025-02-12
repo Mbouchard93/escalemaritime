@@ -21,10 +21,12 @@ document.addEventListener("DOMContentLoaded", function () {
     var marker = L.marker(location.coords).addTo(map);
 
     var popupContent = `
-        <b>${location.name}</b><br>
-        <p>${location.description}</p>
-        <a href="${location.link}" target="_blank">Voir le site web</a><br>
-        <img src="${location.logo}" alt="${location.name}" style="width: 100px; height: auto;">
+        <div class="map__modal">
+          <h4>${location.name}</h4>
+          <p>${location.description}</p>
+          <a href="${location.link}" target="_blank">
+          <img class="map__modal-img" src="${location.logo}" alt="${location.name}"></a>
+        </div>
       `;
     marker.bindPopup(popupContent);
   });

@@ -5,9 +5,11 @@
             <?php 
             $image = get_field('bloc_image');
             if ($image) :
-                $image_url = $image['url'];
+                $image_id = is_array($image) ? $image['ID'] : $image;
+                $image_url = is_array($image) ? $image['url'] : $image;
+                $image_alt = get_acf_image_alt($image_id, 'bloc_image');
             ?>
-                <img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title(); ?>">
+                <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($image_alt); ?>">
             <?php endif; ?>
         </div>
     <?php
