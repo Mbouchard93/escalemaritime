@@ -90,6 +90,24 @@
             "ui_on_text": "Membre du conseils",
             "ui_off_text": "Équipe de travail",
             "ui": 1
+        },
+        {
+            "key": "field_67acdf2357cbb",
+            "label": "Lien du membre",
+            "name": "teams_link",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "placeholder": "Inscrire le lien vers le réseaux personnel du membre"
         }
     ],
     "location": [
@@ -110,5 +128,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1738336512
+    "modified": 1739382674
 }
