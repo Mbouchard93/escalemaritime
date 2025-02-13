@@ -1,14 +1,19 @@
-<section class="mission-section">
-    <div class="mission-text">
-        <h3>
-            <?php the_field('mission_title'); ?>
-        </h3>
-        <p>
-            <?php the_field('mission_text_1'); ?>
-        </p>
-        <p>
-            <?php the_field('mission_text_2'); ?>
-        </p>
+<section class="mission-section" aria-labelledby="mission-heading">
+    <div class="mission-text-container">
+        <div class="mission-text">
+            <h3 id="mission-heading">
+                <?php the_field('mission_title'); ?>
+            </h3>
+            <p>
+                <?php the_field('mission_text_1'); ?>
+            </p>
+            <p>
+                <?php the_field('mission_text_2'); ?>
+            </p>
+        </div>
+        <div class="mission-waves">
+            <!-- waves / vagues -->
+        </div>
     </div>
     <div class="mission-image-wrapper">
         <?php

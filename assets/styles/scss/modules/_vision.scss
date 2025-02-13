@@ -8,15 +8,39 @@
   height: auto;
   max-width: 1600px;
 
+  .vision-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+
   .vision-text {
+    margin-bottom: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  .vision-waves {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../images/vague_partners.svg);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    margin: auto 0 0.5rem 0;
+    width: 95%;
+    height: 30px;
     padding: 1rem;
   }
 
   .vision-image-wrapper,
-  .vision-text {
+  .vision-text-container {
     width: 100%;
     height: 400px;
   }
@@ -35,12 +59,33 @@
     height: 400px;
 
     .vision-image-wrapper,
-    .vision-text {
+    .vision-text-container {
       width: 50%;
     }
 
     .vision-text {
       padding: 2rem;
+    }
+
+    .vision-text-container {
+      flex-direction: row;
+    }
+
+    .vision-text {
+      margin: 0;
+      gap: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+
+    .vision-waves {
+      background-image: url(../../images/vertical_vagues.svg);
+      background-size: auto 100%;
+      background-repeat: no-repeat;
+      margin: 0 0.5rem 0 0;
+      width: 30px;
+      height: 95%;
     }
   }
 
@@ -49,13 +94,26 @@
     height: 500px;
 
     .vision-image-wrapper,
-    .vision-text {
+    .vision-text-container {
       width: 50%;
       height: 500px;
     }
 
     .vision-text {
       padding: 2rem;
+      gap: 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+
+    .vision-waves {
+      background-image: url(../../images/vertical_vagues.svg);
+      background-size: auto 100%;
+      background-repeat: no-repeat;
+      margin: 0 0.5rem 0 0;
+      width: 30px;
+      height: 95%;
     }
   }
 }
