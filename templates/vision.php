@@ -1,11 +1,16 @@
 <section class="vision-section" aria-labelledby="vision-heading">
-    <div class="vision-text">
-        <h3 id="vision-heading">
-            <?php the_field('vision_title'); ?>
-        </h3>
-        <p>
-            <?php the_field('vision_text'); ?>
-        </p>
+    <div class="vision-text-container">
+        <div class="vision-text">
+            <h3 id="vision-heading">
+                <?php the_field('vision_title'); ?>
+            </h3>
+            <p>
+                <?php the_field('vision_text'); ?>
+            </p>
+        </div>
+        <div class="vision-waves">
+            <!-- waves / vagues -->
+        </div>
     </div>
     <div class="vision-image-wrapper">
         <?php
