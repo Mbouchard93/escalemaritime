@@ -63,3 +63,27 @@
     }
   }
 }
+
+.conseil-membre{
+  background-color: white;
+  padding-bottom: 2rem ;
+  position: relative;
+  .bg-top{
+    position: absolute;
+    top: -20px;
+    left: 0;
+    background-image: url(../../images/vague_membre.svg);
+
+    width: 100%;
+    height: 30px;
+  }
+  .bg-bottom{
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    background-image: url(../../images/vague_membre.svg);
+    transform: rotate(180deg);
+    width: 100%;
+    height: 30px;
+  }
+}

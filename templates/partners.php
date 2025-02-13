@@ -26,8 +26,8 @@
                         alt="Logo du partenaire"
                     >
                 </figure>
-                <div class="bg"></div>
                 <p><?php echo esc_html($description); ?></p>
+                <div class="bg"></div>
             </li>
             <?php
         }

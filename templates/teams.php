@@ -8,6 +8,7 @@
         if ($teams->have_posts()) :
     ?>
         <div class="conseil-membre" role="region" aria-labelledby="conseil-heading">
+            <div class="bg-top"></div>
             <h2 id="conseil-heading">Membres du Conseil</h2>
             <div class="layout">
                 <?php while ($teams->have_posts()) : $teams->the_post(); ?>
@@ -48,6 +49,7 @@
                     <?php endif; ?>
                 <?php endwhile; ?>
             </div>
+            <div class="bg-bottom"></div>
         </div>
 
         <div class="equipe-travail" role="region" aria-labelledby="equipe-heading">
