@@ -8,7 +8,7 @@
         if ($teams->have_posts()) :
     ?>
         <div class="conseil-membre" role="region" aria-labelledby="conseil-heading">
-            <h2>Membres du Conseil</h2>
+            <h2 id="conseil-heading">Membres du Conseil</h2>
             <div class="layout">
                 <?php while ($teams->have_posts()) : $teams->the_post(); ?>
                     <?php 
@@ -32,7 +32,7 @@
                                     <a 
                                         href="<?php echo esc_url($team_link); ?>" 
                                         target="_blank"
-                                        rel="noopener noreferrer" 
+                                        rel="noopener noreferrer"
                                         aria-label="<?php echo esc_attr(sprintf('En savoir plus sur %s', $team_name)); ?>"
                                     >
                                 <?php endif; ?>
@@ -51,7 +51,7 @@
         </div>
 
         <div class="equipe-travail" role="region" aria-labelledby="equipe-heading">
-            <h2>Équipe de Travail</h2>
+            <h2 id="equipe-heading">Équipe de Travail</h2>
             <div class="layout">
                 <?php 
                     $teams->rewind_posts(); 

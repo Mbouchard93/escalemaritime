@@ -1,10 +1,16 @@
 <section class="banner_partners" aria-labelledby="partners-heading">
     <h2 id="partners-heading">Nos partenaires</h2>
-    <div class="slider" role="region" aria-roledescription="carousel" aria-label="Logos des partenaires"> 
+    <div 
+        class="slider" 
+        role="region" 
+        aria-roledescription="carousel" 
+        aria-label="Logos des partenaires"
+        aria-live="polite"
+    > 
         <button class="control--previous" aria-label="Diapositive précédente" aria-controls="slider_slides">
             <span aria-hidden="true" class="material-symbols-outlined">arrow_back_ios</span>
         </button>
-        <ul class="slider_slides" role="list">
+        <ul id="slider_slides" class="slider_slides" role="list">
             <?php 
                 $bannerPartners = new WP_Query([
                     'post_type'      => 'partners',

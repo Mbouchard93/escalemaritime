@@ -8,7 +8,7 @@
     <p class="paba-building__text">
         <?php the_field('paba_text_2'); ?>
     </p>
-    <div class="paba-building__image-container" role="img" aria-label="<?php echo esc_attr($image_alt); ?>">
+    <div class="paba-building__image-container" aria-label="<?php echo esc_attr($image_alt); ?>">
     <?php
         $image = get_field('paba_img');
         if ($image) :

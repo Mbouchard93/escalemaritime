@@ -38,11 +38,11 @@
             <p>
                 <?php the_field('text_2'); ?>
             </p>
-            <button class="content-button white">
+            <div class="content-button white">
                 <a href="<?php echo get_field('about_btn_more')['link_btn']; ?>" aria-label="<?php echo esc_attr($label); ?>">
                     <?php echo get_field('about_btn_more')['label_btn']; ?>
                 </a>
-            </button>
+            </div>
         </div>
         <div class="content-image">
             <?php

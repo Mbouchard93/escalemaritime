@@ -1,8 +1,8 @@
-<section class="partners" aria-labelledby="partners-heading">
-    <h2>
+<section class="partners" role="region" aria-labelledby="partners-heading">
+    <h2 id="partners-heading">
         <?php the_field('partner_title'); ?>
     </h2>
-    <ul role="list">
+    <ul>
         <?php
             $i = 1;
             while ($i <= 4) {
