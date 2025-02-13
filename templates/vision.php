@@ -1,6 +1,6 @@
-<section class="vision-section">
+<section class="vision-section" aria-labelledby="vision-heading">
     <div class="vision-text">
-        <h3>
+        <h3 id="vision-heading">
             <?php the_field('vision_title'); ?>
         </h3>
         <p>
@@ -15,7 +15,13 @@
             $image_url = is_array($image) ? $image['url'] : $image;
             $image_alt = get_acf_image_alt($image_id, 'vision_img');
         ?>                    
-            <img class="vision-image" src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($image_alt); ?>">
+            <img 
+                class="vision-image" 
+                src="<?php echo esc_url($image_url); ?>" 
+                alt="<?php echo esc_attr($image_alt); ?>"
+                loading="lazy"
+                decoding="async"
+            >
         <?php endif; ?>
     </div>
 </section>
