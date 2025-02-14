@@ -131,6 +131,24 @@
                     "append": ""
                 }
             ]
+        },
+        {
+            "key": "field_67af4fb6eafc2",
+            "label": "Lien page facebook",
+            "name": "link_fb",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "https:\/\/www.facebook.com\/escalemaritime?locale=fr_CA",
+            "allow_in_bindings": 0,
+            "placeholder": ""
         }
     ],
     "location": [
@@ -151,5 +169,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1739392255
+    "modified": 1739542618
 }

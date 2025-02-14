@@ -77,6 +77,10 @@
     border-radius: 8px;
     cursor: pointer;
     padding: 1rem;
+    &:hover{
+      background-color: $bg-third;
+      color: $color-primary;
+    }
   }
 
   .white {

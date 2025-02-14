@@ -16,6 +16,7 @@
                     $labelnews = !empty($newsletter['label']) ? $newsletter['label'] : '';
                     $linknews = !empty($newsletter['link']) ? $newsletter['link'] : '#';
                     $descnews = !empty($newsletter['text']) ? $newsletter['text'] : '';
+                    $linkFb = get_field('link_fb');
 
                     if (!empty($imageUrl)) : ?>
                         <a href="<?php echo site_url(); ?>"  aria-label="Retour à l'accueil">
@@ -29,7 +30,7 @@
 
             <div class="social" aria-labelledby="social-heading">
                 <p>Suivez-nous!</p>
-                <a href="https://www.facebook.com/escalemaritime?locale=fr_CA" aria-label="Suivez-nous sur Facebook">
+                <a href="<?php echo esc_url($linkFb); ?>" target="_blank" aria-label="Suivez-nous sur Facebook">
                     <img src="<?php bloginfo('template_url'); ?>/assets/images/facebook.svg" alt="Logo facebook" role="img">
                 </a>
             </div>
