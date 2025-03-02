@@ -52,23 +52,23 @@ function sanitize_event_name($name) {
     return $name . '-' . uniqid(); // Ajoute un ID unique pour éviter les conflits
 }
 
-function format_event_date($date, $format = '%e %B %Y') {
-    if (!$date) {
-        return ''; // Retourne une chaîne vide si aucune date n'est fournie
-    }
+function format_event_date($date) {
+    if (!$date) return ''; 
 
-    // Configurer la locale en français
-    setlocale(LC_TIME, 'fr_FR.UTF-8', 'fr_FR', 'fra', 'fr');
+    $months = [
+        "January" => "janvier", "February" => "février", "March" => "mars", 
+        "April" => "avril", "May" => "mai", "June" => "juin",
+        "July" => "juillet", "August" => "août", "September" => "septembre",
+        "October" => "octobre", "November" => "novembre", "December" => "décembre"
+    ];
 
-    // Convertir la date du format Ymd
     $datetime = DateTime::createFromFormat('Ymd', $date);
-    if ($datetime) {
-        // Utiliser strftime pour formater la date avec les accents
-        return utf8_encode(strftime($format, $datetime->getTimestamp()));
-    }
+    if (!$datetime) return $date;
 
-    return $date; // Si la conversion échoue, retourne la date brute
+    $formatted_date = $datetime->format('d F Y');
+    return str_replace(array_keys($months), array_values($months), $formatted_date);
 }
+
 
 $events_limit = isset($events_limit) ? $events_limit : -1;
 ?>
