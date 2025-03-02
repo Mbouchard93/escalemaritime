@@ -1,61 +1,144 @@
-.vision-section {
-  background-color: $white;
+.vision-section-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: auto;
+  background-color: $blue-light-secondary;
   max-width: 1600px;
 
-  .vision-text {
+  .bg-top-vision-section {
+    background-color: $smokewhite;
+    background-image: url(../../images/bg_vision_section.svg);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    width: 100%;
+    height: 250px;
+  }
+
+  .bg-bottom-vision-section {
+    background-color: $blue-light-secondary;
+    width: 100%;
+    height: 50px;
+  }
+
+  .vision-section {
+    background-color: $blue-light-secondary;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    padding: 1rem;
-  }
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: auto;
 
-  .vision-image-wrapper,
-  .vision-text {
-    width: 100%;
-    height: 400px;
-  }
-
-  .vision-image-wrapper {
-    overflow: hidden;
-  }
-
-  .vision-image {
-    min-width: 100%;
-    min-height: 100%;
-  }
-
-  @include media-query("desktop") {
-    flex-direction: row;
-    height: 400px;
-
-    .vision-image-wrapper,
-    .vision-text {
-      width: 50%;
+    .vision-text-container {
+      background-color: $white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
     }
 
     .vision-text {
-      padding: 2rem;
+      margin-bottom: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      gap: 2rem;
+      padding: 1rem;
     }
-  }
 
-  @include media-query("desktop-xl") {
-    flex-direction: row;
-    height: 500px;
+    .vision-waves {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-image: url(../../images/vague_partners.svg);
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+      margin: auto 0 0.5rem 0;
+      width: 95%;
+      height: 30px;
+      padding: 1rem;
+    }
 
     .vision-image-wrapper,
-    .vision-text {
-      width: 50%;
+    .vision-text-container {
+      width: 100%;
+      height: 400px;
+    }
+
+    .vision-image-wrapper {
+      overflow: hidden;
+    }
+
+    .vision-image {
+      min-width: 100%;
+      min-height: 100%;
+    }
+
+    @include media-query("desktop") {
+      flex-direction: row;
+      height: 400px;
+
+      .vision-image-wrapper,
+      .vision-text-container {
+        width: 50%;
+      }
+
+      .vision-text {
+        padding: 2rem;
+      }
+
+      .vision-text-container {
+        flex-direction: row;
+      }
+
+      .vision-text {
+        margin: 0;
+        gap: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+      }
+
+      .vision-waves {
+        background-image: url(../../images/vertical_vagues.svg);
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        margin: 0 0.5rem 0 0;
+        width: 30px;
+        height: 95%;
+      }
+    }
+
+    @include media-query("desktop-xl") {
+      flex-direction: row;
       height: 500px;
-    }
 
-    .vision-text {
-      padding: 2rem;
+      .vision-image-wrapper,
+      .vision-text-container {
+        width: 50%;
+        height: 500px;
+      }
+
+      .vision-text {
+        padding: 2rem;
+        gap: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+      }
+
+      .vision-waves {
+        background-image: url(../../images/vertical_vagues.svg);
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        margin: 0 0.5rem 0 0;
+        width: 30px;
+        height: 95%;
+      }
     }
   }
 }

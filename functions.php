@@ -42,6 +42,20 @@ function create_posttype() {
             'supports' => array('title', 'id'),   
         )
     );
+    register_post_type('info',
+    array(
+        'labels' => array(
+            'name' => __('Information'),
+            'singular_name' => __('info')
+        ),
+        'public' => true,
+        'has_archive' => true,
+        'menu_icon' => 'dashicons-info',
+        'rewrite' => array('slug' => 'info'),
+        'show_in_rest' => true,
+        'supports' => array('title', 'id'),   
+    )
+);
 }
 
 // ! ALT DES IMAGES //
@@ -60,12 +74,23 @@ function get_acf_image_alt($image_id, $acf_field = '') {
     return esc_attr($alt);
 }
 
+function restrict_single_info_post( $query ) {
+    if ( ! is_admin() && $query->is_main_query() && 'info' === $query->get( 'post_type' ) ) {
+        if ( ! is_singular() && ! is_admin() ) {
+            // Limiter à un seul article
+            $query->set( 'posts_per_page', 1 );
+        }
+    }
+}
+
+
 function remove_wysiwyg() {
     remove_post_type_support('page', 'editor');
 }
 
 add_action('init', 'create_posttype');
 add_action('init', 'remove_wysiwyg');
+add_action( 'pre_get_posts', 'restrict_single_info_post' );
 
 wp_enqueue_script( 'dialog', get_template_directory_uri() . '/assets/js/dialog.js');
 wp_enqueue_script( 'leaflet', get_template_directory_uri() . '/assets/js/leaflet.js');

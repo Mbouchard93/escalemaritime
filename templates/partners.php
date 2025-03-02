@@ -1,28 +1,39 @@
-<section class="partners">
-    <h2><?php the_field('partner_title'); ?></h2>
+<section class="partners" role="region" aria-labelledby="partners-heading">
+    <h2 id="partners-heading">
+        <?php the_field('partner_title'); ?>
+    </h2>
     <ul>
-        <?php
-            $i = 1;
-            while ($i <= 4) {
-                $partenaire = get_field('patners_' . $i);
 
-                if ($partenaire) {
-                    $image = $partenaire['img'];
-                    $image_id = is_array($image) ? $image['ID'] : $image;
-                    $imageUrl = is_array($image) ? $image['url'] : $image;
-                    $text = $partenaire['partners_text'];
-                    $titre_partenaire = $partenaire['partners_title'] ?? 'Partenaire ' . $i; 
+    <?php
+    $partenaires = new WP_Query(array(
+        'post_type' => 'partners', 
+        'posts_per_page' => -1, 
+    ));
 
-                    $image_alt = !empty($titre_partenaire) ? $titre_partenaire : get_acf_image_alt($image_id, 'Logo du partenaire');
-                ?>
-                <li>
-                    <img src="<?php echo esc_url($imageUrl); ?>" alt="<?php echo esc_attr($image_alt); ?>">
-                    <p><?php echo esc_html($text); ?></p>
-                </li>
-                <?php
-                }
-                $i++;
-            }
-        ?>
+    if ($partenaires->have_posts()) {
+        while ($partenaires->have_posts()) {
+            $partenaires->the_post();
+            $logo = get_field('partner_logo');
+            $logo_url = $logo ? $logo['url'] : '';
+            $description = get_field('partner_desc') ?: 'Aucune description.';
+            ?>
+            <li>
+                <figure>
+                    <img 
+                        src="<?php echo esc_url($logo_url); ?>"
+                        loading="lazy"
+                        decoding="async"
+                        alt="Logo du partenaire"
+                    >
+                </figure>
+                <p><?php echo esc_html($description); ?></p>
+                <div class="bg"></div>
+            </li>
+            <?php
+        }
+        wp_reset_postdata();
+    }
+    ?>
+
     </ul>
 </section>

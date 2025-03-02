@@ -14,9 +14,20 @@
         <nav aria-label="Navigation principale">
             <div class="logo">
                 <a href="<?php echo site_url(); ?>" aria-label="Retour à l'accueil">
-                    <img src="<?php bloginfo('template_url'); ?>/assets/images/logo-header.svg" alt="Logo: Escale maritime">
+                    <?php
+                    $info = new WP_Query(array(
+                        'post_type' => 'info',
+                        'posts_per_page' => 1, 
+                    ));
+                    if ($info->have_posts()) :
+                        $info->the_post();
+                        $image = get_field('header_logo');
+                        $imageUrl = $image['url'];
+                    ?>
+                            <img src="<?php echo $imageUrl; ?>" alt="Logo: Escale maritime">
+                    <?php endif; wp_reset_postdata();  ?>
                 </a>
-            </div aria-expanded="false" aria-controls="menu-mobile" aria-label="Menu principal">
+            </div>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/menu-burger.svg" class="btn-menu" data-dialog="#menu-mobile" role="presentation" />
             <?php
                 wp_nav_menu(array(
@@ -48,8 +59,10 @@
             <?php
             $parent_id = wp_get_post_parent_id(get_the_ID());
 
-            if (is_front_page()) : ?>
-                <img src="<?php bloginfo('template_url'); ?>/assets/images/logo-header.svg" alt="Logo: Escale maritime">
+            if (is_front_page()) :
+                if (isset($imageUrl)) : ?>
+                    <img src="<?php echo $imageUrl; ?>" alt="Logo: Escale maritime">
+                <?php endif; ?>
             
             <?php elseif (is_404()) : ?>
                 <h1 class="error-title">404</h1>
@@ -58,7 +71,7 @@
                 <h1><?php echo get_the_title($parent_id); ?></h1>
 
             <?php else : ?>
-                <h1 ><?php echo get_the_title(); ?></h1>
+                <h1><?php echo get_the_title(); ?></h1>
             <?php endif; ?>
 
             <?php if (
@@ -74,14 +87,15 @@
                             'menu_class' => 'sub-navigation',
                             'container' => false,
                             'theme_location' => 'primary',
+                            'aria-label' => 'Menu à propos',
                         ));
                     ?>
                 </nav>
             <?php endif; ?>
 
             <div class="header-images" aria-hidden="true" role="presentation">
-                <img src="<?php bloginfo('template_url'); ?>/assets/images/header-1.png" aria-hidden="true" alt="Image d'une montagne bleu" role="presentation">
-                <img src="<?php bloginfo('template_url'); ?>/assets/images/header-2.png" aria-hidden="true" alt="Image d'une montagne bleu" role="presentation">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/header-1.png" aria-hidden="true" alt="Image d'une montagne bleu" role="presentation">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/header-2.png" aria-hidden="true" alt="Image d'une montagne bleu" role="presentation">
             </div>
         </div>
     </header>

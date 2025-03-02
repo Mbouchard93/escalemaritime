@@ -1,4 +1,9 @@
+---
 deployment:
   tasks:
     - export DEPLOYPATH=/home/becmaweb/escalemaritime.becmaweb.ca/wp-content/themes/escalemaritime
-    - /bin/cp -R /home/becmaweb/repositories/escalemaritime/* $DEPLOYPATH
+    - export REPOPATH=/home/becmaweb/repositories/escalemaritime
+    - /bin/rsync -aP --exclude '.git' --exclude '.well-known' ${REPOPATH}/ ${DEPLOYPATH} --delete-after
+    - /bin/chmod 755 ${DEPLOYPATH}
+    - /bin/find ${DEPLOYPATH} -type d -exec /bin/chmod 755 '{}' \;
+    - /bin/find ${DEPLOYPATH} -type f -exec /bin/chmod 644 '{}' \;

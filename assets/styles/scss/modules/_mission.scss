@@ -8,17 +8,41 @@
   height: auto;
   max-width: 1600px;
 
+  .mission-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+
   .mission-text {
+    margin-bottom: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  .mission-waves {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../images/vague_partners.svg);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    margin: auto 0 0.5rem 0;
+    width: 95%;
+    height: 30px;
     padding: 1rem;
   }
 
   .mission-image-wrapper,
-  .mission-text {
+  .mission-text-container {
     width: 100%;
-    height: 400px;
+    height: 500px;
   }
 
   .mission-image-wrapper {
@@ -32,14 +56,14 @@
 
   @include media-query("mobile") {
     .mission-image-wrapper,
-    .mission-text {
+    .mission-text-container {
       height: 400px;
     }
   }
 
   @include media-query("tablet") {
     .mission-image-wrapper,
-    .mission-text {
+    .mission-text-container {
       height: 400px;
     }
   }
@@ -50,13 +74,30 @@
     height: 400px;
 
     .mission-image-wrapper,
-    .mission-text {
+    .mission-text-container {
       width: 50%;
       height: 400px;
     }
 
+    .mission-text-container {
+      flex-direction: row-reverse;
+    }
+
     .mission-text {
-      padding: 2rem;
+      margin: 0;
+      gap: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+
+    .mission-waves {
+      background-image: url(../../images/vertical_vagues.svg);
+      background-size: auto 100%;
+      background-repeat: no-repeat;
+      margin: 0 0 0 0.5rem;
+      width: 30px;
+      height: 95%;
     }
   }
 
@@ -66,13 +107,16 @@
     height: 500px;
 
     .mission-image-wrapper,
-    .mission-text {
+    .mission-text-container {
       width: 50%;
       height: 500px;
     }
 
     .mission-text {
-      padding: 2rem;
+      gap: 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
     }
   }
 }
