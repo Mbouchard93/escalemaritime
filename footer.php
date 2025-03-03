@@ -31,7 +31,7 @@
             <div class="social" aria-labelledby="social-heading">
                 <p>Suivez-nous!</p>
                 <a href="<?php echo esc_url($linkFb); ?>" target="_blank" aria-label="Suivez-nous sur Facebook">
-                    <img src="<?php bloginfo('template_url'); ?>/assets/images/facebook.svg" alt="Logo facebook" role="img">
+                    <img src="<?php bloginfo('template_url'); ?>/assets/images/logofb.svg" alt="Logo facebook" role="img">
                 </a>
             </div>
 
