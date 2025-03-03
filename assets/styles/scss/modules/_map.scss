@@ -52,3 +52,20 @@
     width: 100px;
   }
 }
+
+.leaflet-popup-content-wrapper {
+  max-width: 80% !important;
+  @include media-query("tablet") {
+    max-width: none;
+  }
+}
+
+.leaflet-popup-content-wrapper,
+.leaflet-popup-content {
+  max-width: 80% !important;
+  overflow-y: scroll;
+  @include media-query("tablet") {
+    max-width: none;
+    overflow: hidden;
+  }
+}
