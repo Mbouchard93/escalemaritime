@@ -16,11 +16,14 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Ajout de la couche OpenStreetMap
-  L.tileLayer("https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png", {
-    maxZoom: 19,
-    attribution:
-      '&copy; <a href="https://wikimediafoundation.org/wiki/Maps_Terms_of_Use">Wikimedia</a>',
-  }).addTo(window.myMap);
+  L.tileLayer(
+    "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
+    {
+      attribution:
+        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+      subdomains: "abcd",
+    }
+  ).addTo(window.myMap);
 
   // Vérification si "locations" est bien défini
   if (
