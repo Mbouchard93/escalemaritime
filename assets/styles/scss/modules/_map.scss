@@ -53,19 +53,24 @@
   }
 }
 
-.leaflet-popup-content-wrapper {
-  max-width: 80% !important;
+.leaflet-popup-content-wrapper,
+.leaflet-popup-content {
+  padding-top: 8px;
+  width: 100%;
+  max-width: 70% !important;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+
   @include media-query("tablet") {
-    max-width: none;
+    max-width: none !important;
+    overflow: hidden;
   }
 }
 
-.leaflet-popup-content-wrapper,
-.leaflet-popup-content {
-  max-width: 80% !important;
-  overflow-y: scroll;
-  @include media-query("tablet") {
-    max-width: none;
-    overflow: hidden;
-  }
+.leaflet-popup-close-button {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 1000;
 }
