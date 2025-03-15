@@ -61,7 +61,7 @@
 
             if (is_front_page()) :
                 if (isset($imageUrl)) : ?>
-                    <img src="<?php echo $imageUrl; ?>" alt="Logo: Escale maritime">
+                    <img class="img-logo-header" src="<?php echo $imageUrl; ?>" alt="Logo: Escale maritime">
                 <?php endif; ?>
             
             <?php elseif (is_404()) : ?>

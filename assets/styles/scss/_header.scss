@@ -6,14 +6,20 @@ header {
   background-color: $bg-primary;
 
   .header-wrapper {
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
     position: relative;
     z-index: 2;
+    width: 100%;
 
     :first-of-type,
     h1 {
       place-self: center;
+    }
+
+    .img-logo-header {
+      max-width: 200px;
     }
   }
   nav {
@@ -21,12 +27,23 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.5rem;
+    padding: 1rem 1.5rem;
     max-width: 1600px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 500;
+    background-color: $bg-primary;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 
     .logo {
       max-width: 8.2rem;
+
+      img {
+        max-height: 80px;
+      }
     }
+
     .mobile-navigation {
       position: relative;
       background-color: $bg-primary;
@@ -69,7 +86,7 @@ header {
           position: relative;
 
           &::after {
-            content: "\276F";
+            content: "\276D";
             position: absolute;
             right: -16px;
             top: 50%;
